@@ -11,7 +11,8 @@ body {
 header,
 main {
   margin-block: 4em;
-  margin-inline: 8em;
+  margin-inline: auto;
+  width: 75%;
 }
 main {
   margin-block: 7em;
@@ -22,8 +23,9 @@ header div img {
   display: inline-block;
 }
 .question {
-  width: 60%;
+  width: 50%;
   margin-inline: auto;
+  text-align: center;
 }
 .question h1 {
   font-weight: bold;
@@ -98,4 +100,5 @@ header div img {
   width: 150px;
   margin-inline: auto;
   margin-block: 2em;
+  font-size: 1.2em;
 }
