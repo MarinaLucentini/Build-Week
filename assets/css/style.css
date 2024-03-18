@@ -1,0 +1,20 @@
+body {
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+
+  height: 100vh;
+  background-repeat: no-repeat;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+}
+header,
+main {
+  margin-block: 4em;
+  margin-inline: 8em;
+}
+header div img {
+  width: 15%;
+  height: auto;
+
+  display: block;
+}
