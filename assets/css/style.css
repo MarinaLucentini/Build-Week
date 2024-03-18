@@ -1,10 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap");
 body {
   background-image: url("../img/bg.jpg");
   background-size: cover;
 
   height: 100vh;
   background-repeat: no-repeat;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Inter", sans-serif;
   color: white;
 }
 header,
@@ -12,9 +13,89 @@ main {
   margin-block: 4em;
   margin-inline: 8em;
 }
+main {
+  margin-block: 7em;
+}
 header div img {
   width: 15%;
   height: auto;
+  display: inline-block;
+}
+.question {
+  width: 60%;
+  margin-inline: auto;
+}
+.question h1 {
+  font-weight: bold;
+  font-size: 4em;
+  display: inline-block;
+  font-family: "Outfit", sans-serif;
+}
+.progress-esterno {
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  margin-left: 75%;
+  background: linear-gradient(to right, #00ffff 30%, grey 70%);
+  text-align: center;
+  display: inline-block;
+}
+.progress-interno {
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  margin-block: 1em;
+  background: radial-gradient(#59226d, black);
+  text-align: center;
+  display: inline-block;
+}
 
-  display: block;
+.progress-text {
+  margin-block: 0.8em;
+}
+.progress-text p {
+  font-size: 0.5em;
+}
+.progress-text h4 {
+  font-size: 2em;
+}
+.button-answers {
+  margin-block: 6em;
+  padding-inline: 8.5em;
+  box-sizing: content-box;
+}
+.button-ans {
+  width: 35%;
+  display: inline-block;
+  margin-inline: 3.5em;
+  margin-block: 1.5em;
+  font: inherit;
+  height: 70px;
+  border-radius: 40px;
+  background-color: #63428f;
+  color: white;
+  box-shadow: -1px -3px #ffffffc9;
+}
+
+.button-ans-click {
+  background-color: #900080;
+  width: 35%;
+  display: inline-block;
+  margin-inline: 3.5em;
+  margin-block: 1.5em;
+  font: inherit;
+  height: 70px;
+  border-radius: 40px;
+
+  color: white;
+  box-shadow: -1px -3px #ffffffc9;
+}
+.howmanyquestion p {
+  display: inline-block;
+}
+.howmanyquestion {
+  width: 150px;
+  margin-inline: auto;
+  margin-block: 2em;
 }
