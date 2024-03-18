@@ -1,5 +1,8 @@
 /* main */
 /* div contenente h1 */
+main {
+  margin-top: 150px;
+}
 main div h1 {
   font-size: 130px;
   line-height: 0.65;
@@ -35,21 +38,43 @@ main article p {
 ul {
   list-style-type: disc;
 }
-main label input {
-  margin-top: 100px;
-}
+
 .label {
   font-size: 29px;
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
+  margin-top: 150px;
+  margin-bottom: 300px;
 }
 .checkbox {
-  transform: scale(2.1);
-  margin-right: 20px;
-  margin-left: 16px;
-  background-color: transparent;
-  border: 2px solid #ffffff;
+  /* transform: scale(2.1); */
+  /* margin-right: 20px; */
+  /* margin-left: 16px; */
+  /* background-color: transparent; */
+  /* border: 2px solid #ffffff; */
+  display: none;
 }
+/* PROVA CHECKBOX */
+.label .custom-checkbox {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 3px solid #ffffff; /* Imposta il bordo bianco */
+  margin-right: 20px;
+  margin-left: 10px;
+}
+.label .checkbox:checked + .custom-checkbox {
+  background-color: #000000;
+}
+.label .checkbox:checked + .custom-checkbox::after {
+  content: "\2713";
+  display: block;
+  text-align: center;
+  line-height: 20px;
+  font-size: 24px;
+  color: #ffffff;
+}
+/* PROVA CHECKBOX */
 .bottone {
   margin-left: 350px;
   width: 250px;
