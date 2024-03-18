@@ -1,11 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-image: url("../img/bg.jpg");
+  background-image: url('../img/bg.jpg');
   background-size: cover;
 
   height: 100vh;
   background-repeat: no-repeat;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   color: white;
+  display: grid;
 }
 header,
 main {

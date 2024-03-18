@@ -1,0 +1,106 @@
+h1,
+h3 {
+  font-size: xx-large;
+  font-weight: 800;
+  font-family: 'Outfit', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.result-container {
+  text-align: center;
+}
+.progress-circle {
+  margin-top: 10px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-image: conic-gradient(#00ffff 66.7%, #c2128d 33.3%);
+  position: relative;
+  text-align: -webkit-center;
+  line-height: normal;
+  margin-left: 34%;
+  margin-top: 25px;
+  position: absolute;
+  display: inline-block;
+  align-items: center;
+  padding-block: 0.7em;
+}
+.progress-circle::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background-image: url(/assets/img/bg.jpg);
+  border-radius: 50%;
+}
+.progress-circle span {
+  width: 200px;
+  height: 200px;
+  background-color: none;
+  border-radius: 50%;
+  position: relative;
+  color: #fff;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+.correct {
+  margin-top: 10%;
+  text-align: auto;
+  font-size: xx-large;
+  margin-block: 4em;
+  margin-inline: 8em;
+  text-align: start;
+  display: inline-block;
+  font-weight: 800;
+  font-family: 'Outfit', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+.wrong {
+  margin-top: auto;
+  text-align: auto;
+  font-size: xx-large;
+  margin-block: 4em;
+  margin-inline: 8em;
+  text-align: end;
+  display: inline-block;
+  font-weight: 800;
+  font-family: 'Outfit', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+.button {
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  padding: 20px 60px;
+  text-decoration: none;
+  font-size: 32px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  font-weight: 800;
+}
+.button:hover {
+  background-color: #000;
+  color: white;
+}
+.bottone {
+  text-align: center;
+}
+
+.container {
+  margin-top: 20px;
+  text-align: -webkit-center;
+}
