@@ -4,7 +4,7 @@ body {
 
   height: 100vh;
   background-repeat: no-repeat;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Inter", sans-serif;
   color: white;
 }
 header,
@@ -27,6 +27,7 @@ header div img {
   text-align: center;
   font-size: 3rem;
   font-weight: bold;
+  font-family: "Outfit", sans-serif;
 }
 .txtFeedbackSection p {
   color: white;
