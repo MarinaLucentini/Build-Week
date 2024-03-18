@@ -36,6 +36,7 @@ header div img {
   margin-top: 2em;
   width: 700px;
   margin-inline: auto;
+  line-height: 1.2em;
 }
 .ratingStars {
   text-align: center;
@@ -80,7 +81,7 @@ header div img {
   background-color: #00ffff;
   border: none;
   font-weight: 700;
-  box-shadow: 1px 0px 5px 2px#0ae3eb;
+  box-shadow: 1px 0px 15px 4px#0ae3eb;
   font-size: 1.2rem;
   cursor: pointer;
 }
