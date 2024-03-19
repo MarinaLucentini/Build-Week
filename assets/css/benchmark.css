@@ -1,0 +1,26 @@
+/* inizio modifiche  */
+.contatoreQuestion {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+.contatoreQuestion p {
+  text-transform: uppercase;
+}
+.coloreContatore {
+  color: #d20094;
+}
+.Question h1 {
+  font-size: 80px;
+}
+.contenitoreRisposte {
+  margin: 150px 0px;
+}
+.contenitoreRisposte button {
+  background-color: aqua;
+  height: 100px;
+  width: 550px;
+  margin: 15px 15px;
+  border-radius: 150px;
+  font-size: 26px;
+  font-weight: bold;
+}

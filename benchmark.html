@@ -3,37 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Benchmark</title>
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/benchmark.css" />
   </head>
   <body>
     <header>
       <div>
-        <img src="assets/img/epicode_logo.png" alt="logo" />
-      </div>
-      <div class="progress-esterno">
-        <div class="progress-interno">
-          <div class="progress-text">
-            <p>SECOND</p>
-            <h4>16</h4>
-            <p>REMANING</p>
-          </div>
-        </div>
+        <img src="/assets/img/epicode_logo.png" alt="logo epicode" />
       </div>
     </header>
     <main>
-      <div class="question"><h1>Domanda da inserire</h1></div>
-      <div class="button-answers">
-        <button class="button-ans">Risposta 1</button>
-        <button class="button-ans-click">Risposta 2</button>
-        <button class="button-ans">Risposta 3</button>
-        <button class="button-ans">Risposta 4</button>
-      </div>
-      <div class="howmanyquestion">
-        <p>QUESTION</p>
-        <p>1/10</p>
-      </div>
+      <table>
+        <div class="Question"></div>
+        <div class="contenitoreRisposte"></div>
+        <div class="contatoreQuestion">
+          <p>
+            <span>question </span><span class="valoreContatore"></span
+            ><span class="coloreContatore"> / 10</span>
+          </p>
+        </div>
+      </table>
     </main>
+    <script src="/java/benchmark.js"></script>
   </body>
 </html>
