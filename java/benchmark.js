@@ -92,6 +92,10 @@ const questions = [
   },
   // Altre domande...
 ]
+
+// Array per salvare l'esito di ogni risposta
+const results = [];
+
 // Codice per il timer
 let counter = 60;
 let progress = -19;
@@ -183,6 +187,14 @@ function nextQuestion() {
         console.log("Risposta sbagliata!");
       }
 
+      // Salva l'esito di questa risposta
+      results.push({
+        question: domanda.question,
+        selectedAnswer: risposta,
+        correctAnswer: domanda.correct_answer,
+        isCorrect: risposta === domanda.correct_answer
+      });
+
       // Passa alla prossima domanda
       index++;
       if (index < questions.length) {
@@ -195,6 +207,6 @@ function nextQuestion() {
     });
   });
 }
-
 // Mostra la prima domanda all'apertura della pagina
+console.log("prova risultati", results)
 nextQuestion();
