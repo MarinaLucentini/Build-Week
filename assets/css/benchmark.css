@@ -8,6 +8,7 @@ main {
 }
 .contatoreQuestion p {
   text-transform: uppercase;
+  margin-top: 45px;
 }
 .coloreContatore {
   color: #d20094;
@@ -61,9 +62,6 @@ main {
 .progress-textH4 {
   font-size: 2em;
 }
-footer {
-  text-align: center;
-}
 .button-question {
   border: 1px solid white;
   color: white;
@@ -73,4 +71,22 @@ footer {
   text-transform: uppercase;
   font-size: 2em;
   margin-bottom: 2em;
+}
+footer {
+  text-align: center;
+  display: inline-flex;
+}
+footer button {
+  text-align: center;
+  height: 150px;
+  width: 455px;
+}
+#show-result-button {
+  margin-left: 300px;
+  font-size: 32px;
+  background-color: #00ffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 0 60px #0ae3eb;
+  border: 0;
 }

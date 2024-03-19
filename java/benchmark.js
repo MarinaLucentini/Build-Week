@@ -101,7 +101,7 @@ let counter = 60;
 let progress = -19;
 let timer;
 
-// Seleziona gli elementi del timer una sola volta
+// Definizione dell'elemento h4 e inizializzazione del timer
 const h4 = document.createElement("h4");
 const containerText = document.getElementById("container-text");
 const second = document.createElement("p");
@@ -113,14 +113,14 @@ rimanenti.classList.add("progress-textP");
 second.innerText = "SECONDS";
 rimanenti.innerText = "REMAINING";
 
+// Funzione per avviare il timer
 function startTimer() {
   clearInterval(timer);
   counter = 60;
   progress = -19;
   timer = setInterval(() => {
     counter--;
-    h4.innerText = counter; // Aggiorna il testo direttamente
-    // Questo serve per il countdown dei secondi
+    h4.innerText = counter;
     const progressBar = document.getElementById("progress-bar");
     progress = progress + 2;
     progressBar.style.background = `conic-gradient(cyan ${progress}%, #9b9898 0%)`;
@@ -128,17 +128,12 @@ function startTimer() {
     if (counter === 0) {
       clearInterval(timer);
       console.log("Tempo scaduto!");
-      // Puoi aggiungere qui la logica per gestire il tempo scaduto
-      // Se il timer è scaduto e l'utente non ha ancora risposto, considera la risposta sbagliata
-      console.log("Tempo scaduto! Risposta sbagliata.");
-      // Passa automaticamente alla prossima domanda
       index++;
       if (index < questions.length) {
         nextQuestion();
-        startTimer(); // Riparte il timer per la nuova domanda
+        startTimer();
       } else {
         console.log("Hai completato tutte le domande!");
-        // Puoi aggiungere qui la logica per mostrare il punteggio finale o fare altre azioni
       }
     }
   }, 100);
@@ -152,61 +147,44 @@ function nextQuestion() {
   const contatoreElement = document.querySelector(".valoreContatore");
   const questionElement = document.querySelector(".Question");
   const risposteElement = document.querySelector(".contenitoreRisposte");
-
-  // Pulisce il contenitore delle risposte precedenti
   risposteElement.innerHTML = "";
-
-  // Reimposta il timer
   startTimer();
-
-  // Ottiene la domanda corrente
   const domanda = questions[index];
-
-  // Imposta il testo della domanda e il contatore
   questionElement.innerHTML = `<h1>${domanda.question}</h1>`;
   contatoreElement.textContent = `${index + 1}`;
-
-  // Combina le risposte corrette e sbagliate e le mescola
   const tutteLeRisposte = [...domanda.incorrect_answers, domanda.correct_answer];
   tutteLeRisposte.sort(() => Math.random() - 0.5);
-
-  // Crea i bottoni per ogni risposta
   tutteLeRisposte.forEach((risposta) => {
     const bottone = document.createElement("button");
     bottone.textContent = risposta;
-    bottone.classList.add("button-ans"); // Usa qui la classe CSS appropriata per i bottoni
+    bottone.classList.add("button-ans");
     risposteElement.appendChild(bottone);
-
-    // Eventuale listener per il click sui bottoni
     bottone.addEventListener("click", () => {
-      // Qui puoi gestire la logica per verificare se la risposta è corretta o sbagliata
-      // Ad esempio:
-      if (risposta === domanda.correct_answer) {
-        console.log("Risposta corretta!");
-      } else {
-        console.log("Risposta sbagliata!");
-      }
-
-      // Salva l'esito di questa risposta
+      let isCorrect = risposta === domanda.correct_answer;
+      console.log(isCorrect ? "Risposta corretta!" : "Risposta sbagliata!");
       results.push({
         question: domanda.question,
         selectedAnswer: risposta,
         correctAnswer: domanda.correct_answer,
-        isCorrect: risposta === domanda.correct_answer
+        isCorrect: isCorrect
       });
-
-      // Passa alla prossima domanda
       index++;
       if (index < questions.length) {
         nextQuestion();
-      } else {
-        window.location.href = "result.html";
-        console.log("Hai completato tutte le domande!");
-        // Puoi aggiungere qui la logica per mostrare il punteggio finale o fare altre azioni
       }
     });
   });
+  if (index === questions.length - 1) {
+    const footer = document.querySelector('footer');
+    const showResultButton = document.createElement("button");
+    showResultButton.textContent = "MOSTRA RISULTATO TEST";
+    showResultButton.id = "show-result-button";
+    showResultButton.classList.add("button-ans");
+    footer.appendChild(showResultButton);
+    showResultButton.addEventListener("click", () => {
+      window.location.href = "result.html";
+    });
+  }
 }
-// Mostra la prima domanda all'apertura della pagina
-console.log("prova risultati", results)
 nextQuestion();
+console.log("dcscfd", results)
