@@ -1,32 +1,36 @@
-h1,
-h3 {
-  font-size: xx-large;
+h1 {
+  font-size: 80px;
   font-weight: 800;
   font-family: 'Outfit', sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
 }
-
+h3 {
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 60px;
+  font-weight: 200;
+}
 .result-container {
   text-align: center;
 }
 .progress-circle {
-  margin-top: 10px;
-  width: 250px;
-  height: 250px;
+  margin-top: 20px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
-  background-image: conic-gradient(#00ffff 66.7%, #c2128d 33.3%);
+  background-image: conic-gradient(#00ffff 66.7%, #c2128d 0%);
   position: relative;
   text-align: -webkit-center;
   line-height: normal;
-  margin-left: 34%;
   margin-top: 25px;
   position: absolute;
   display: inline-block;
   align-items: center;
   padding-block: 0.7em;
-  margin-left: 35%;
+  margin-left: 33%;
   box-shadow: 5px 5px 15px 5px #000000;
 }
 .progress-circle::before {
@@ -41,7 +45,7 @@ h3 {
 }
 .progress-circle span {
   width: 200px;
-  height: 200px;
+  height: 450px;
   background-color: none;
   border-radius: 50%;
   position: relative;
@@ -54,11 +58,12 @@ h3 {
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
+  font-size: x-large;
 }
 .correct {
   margin-top: 10%;
   text-align: auto;
-  font-size: xx-large;
+  font-size: 50px;
   margin-block: 4em;
   margin-inline: 8em;
   text-align: start;
@@ -72,7 +77,7 @@ h3 {
 .wrong {
   margin-top: auto;
   text-align: auto;
-  font-size: xx-large;
+  font-size: 50px;
   margin-block: 4em;
   margin-inline: 8em;
   text-align: end;
