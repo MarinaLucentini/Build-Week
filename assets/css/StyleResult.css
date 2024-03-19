@@ -1,7 +1,7 @@
 h1 {
   font-size: 80px;
   font-weight: 800;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
@@ -40,7 +40,7 @@ p {
   overflow: hidden;
 }
 .progress-circle::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 10%;
   left: 10%;
@@ -61,7 +61,7 @@ p {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
@@ -76,7 +76,7 @@ p {
   margin-inline: 8em;
   display: inline-block;
   font-weight: 800;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
@@ -91,7 +91,7 @@ p {
   text-align: center;
   display: inline-block;
   font-weight: 800;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
