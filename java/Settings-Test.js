@@ -852,63 +852,135 @@ const questions = [
 },
 //   fine hard -------------------------------------------------------------------------------------------------------------------
 ]
-// funzione nella schermata settings test condiziona i bottoni per avviare lo start
-function checkStartButton() {
-    const bottoni1Buttons = document.querySelectorAll(".bottoni1 button.selected");
-    const bottoni2Buttons = document.querySelectorAll(".bottoni2 button.selected");
-    const startButton = document.querySelector(".startbutton");
+//fine array --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    if (bottoni1Buttons.length > 0 && bottoni2Buttons.length > 0) {
-      startButton.disabled = false;
-    } else {
-      startButton.disabled = true;
-    }
+
+//timer -------------------------------------------------------------------------------------------------------------------
+let counter = 60;
+let progress = 0;
+
+const h4 = document.createElement("h4");
+const containerText = document.getElementById("container-text");
+const second = document.createElement("p");
+const rimanenti = document.createElement("p");
+containerText.append(second, h4, rimanenti);
+h4.classList.add("progress-textH4");
+second.classList.add("progress-textP");
+rimanenti.classList.add("progress-textP");
+second.innerText = "SECONDS";
+rimanenti.innerText = "REMAINING";
+const timer = setInterval(() => {
+  counter--;
+  h4.innerText = " ";
+  h4.innerText = counter;
+  //   questo serve per il countdown dei secondi
+  const progressBar = document.getElementById("progress-bar");
+  progress = progress + 2;
+  progressBar.style.background = `conic-gradient(cyan ${progress}%, #9b9898 0%)`;
+
+  if (counter === 0) {
+    clearInterval(timer);
   }
+}, 900);
+// end timer -------------------------------------------------------------------------------------------------------------------
+//inziamo a filtrare array easy, medium, hard e mix
 
-  function selectButton(button) {
-    const buttons = button.parentNode.querySelectorAll("button");
-    buttons.forEach(btn => {
-      if (btn === button) {
-        btn.classList.add("selected");
-      } else {
-        btn.classList.remove("selected");
-      }
-    });
-  }
+questions.filter(function (filtro) {
+  questions.forEach(difficulty => (){
+    
+  })
 
-  // function start() {
-  //   // Codice per avviare il test quando il pulsante "Start" è cliccato
-  //   alert("Il test è pronto, clicca ok per continuare ed avviare il test.");
-  // }
-  
-  //inizio funzione che in base al settaggio dato genera un array corrispondente alla quantità selezionata e la difficolta selezionata all'interno di benchmark.html 
 
-  function startTest() {
-    // Ottenere la difficoltà selezionata
-    const selectedDifficulty = document.querySelector(".bottoni2 button.selected").textContent.trim().toLowerCase();
+})
+
+console.log(questions)
+
+
+
+
+
+
+
+// let valoreQuantiàDomande = 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // funzione nella schermata settings test condiziona i bottoni per avviare lo start
+// function checkStartButton() {
+//     const bottoni1Buttons = document.querySelectorAll(".bottoni1 button.selected");
+//     const bottoni2Buttons = document.querySelectorAll(".bottoni2 button.selected");
+//     const startButton = document.querySelector(".startbutton");
+
+//     if (bottoni1Buttons.length > 0 && bottoni2Buttons.length > 0) {
+//       startButton.disabled = false;
+//     } else {
+//       startButton.disabled = true;
+//     }
+//   }
+
+//   function selectButton(button) {
+//     const buttons = button.parentNode.querySelectorAll("button");
+//     buttons.forEach(btn => {
+//       if (btn === button) {
+//         btn.classList.add("selected");
+//       } else {
+//         btn.classList.remove("selected");
+//       }
+//     });
+//   }
+
+//   // function start() {
+//   //   // Codice per avviare il test quando il pulsante "Start" è cliccato
+//   //   alert("Il test è pronto, clicca ok per continuare ed avviare il test.");
+//   // }
   
-    // Ottenere il numero di domande desiderate
-    const numQuestions = parseInt(document.querySelector(".bottoni1 button.selected").textContent.trim());
+//   //inizio funzione che in base al settaggio dato genera un array corrispondente alla quantità selezionata e la difficolta selezionata all'interno di benchmark.html 
+
+//   function startTest() {
+//     // Ottenere la difficoltà selezionata
+//     const selectedDifficulty = document.querySelector(".bottoni2 button.selected").textContent.trim().toLowerCase();
   
-    // Filtrare le domande in base alla difficoltà selezionata
-    const filteredQuestions = questions.filter(question => question.difficulty === selectedDifficulty);
+//     // Ottenere il numero di domande desiderate
+//     const numQuestions = parseInt(document.querySelector(".bottoni1 button.selected").textContent.trim());
   
-    // Selezionare un numero casuale di domande dal set filtrato
-    const selectedQuestions = [];
-    for (let i = 0; i < numQuestions; i++) {
-      const randomIndex = Math.floor(Math.random() * filteredQuestions.length);
-      selectedQuestions.push(filteredQuestions[randomIndex]);
-      // Rimuovere la domanda selezionata per evitare duplicati
-      filteredQuestions.splice(randomIndex, 1);
-    }
+//     // Filtrare le domande in base alla difficoltà selezionata
+//     const filteredQuestions = questions.filter(question => question.difficulty === selectedDifficulty);
   
-    // Codificare l'array di domande in formato JSON
-    const encodedQuestions = encodeURIComponent(JSON.stringify(selectedQuestions));
+//     // Selezionare un numero casuale di domande dal set filtrato
+//     const selectedQuestions = [];
+//     for (let i = 0; i < numQuestions; i++) {
+//       const randomIndex = Math.floor(Math.random() * filteredQuestions.length);
+//       selectedQuestions.push(filteredQuestions[randomIndex]);
+//       // Rimuovere la domanda selezionata per evitare duplicati
+//       filteredQuestions.splice(randomIndex, 1);
+//     }
   
-    // Costruire l'URL per la pagina benchmark.html con il parametro delle domande
-    const benchmarkURL = `benchmark.html?questions=${encodedQuestions}`;
+//     // Codificare l'array di domande in formato JSON
+//     const encodedQuestions = encodeURIComponent(JSON.stringify(selectedQuestions));
   
-    // Reindirizzare alla pagina benchmark.html con le domande selezionate
-    window.location.href = benchmarkURL;
-  }
+//     // Costruire l'URL per la pagina benchmark.html con il parametro delle domande
+//     const benchmarkURL = `benchmark.html?questions=${encodedQuestions}`;
+  
+//     // Reindirizzare alla pagina benchmark.html con le domande selezionate
+//     window.location.href = benchmarkURL;
+//   }
   

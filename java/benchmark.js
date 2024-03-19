@@ -1,7 +1,7 @@
 // prove genera domande
 
-let index = 0;
-index = Math.floor(Math.random() * 11);
+// let index = 0;
+// index = Math.floor(Math.random() * 11);
 // adesso voglio creare la funzione del bottone
 // function nextQuestion() {
 //   const contatoreElement = document.querySelector(".valoreContatore");
