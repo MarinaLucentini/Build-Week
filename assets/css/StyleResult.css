@@ -1,0 +1,125 @@
+h1 {
+  font-size: 80px;
+  font-weight: 800;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+h3 {
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 60px;
+  font-weight: 200;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+p {
+  margin-top: -74px;
+}
+.result-container {
+  text-align: center;
+}
+.progress-circle {
+  margin-top: 20px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-image: conic-gradient(#00ffff 66.7%, #c2128d 0%);
+  position: relative;
+  text-align: -webkit-center;
+  line-height: normal;
+  margin-top: 25px;
+  position: absolute;
+  display: inline-block;
+  align-items: center;
+  padding-block: 0.7em;
+  margin-left: 28%;
+  box-shadow: 5px 5px 15px 5px #000000;
+  overflow: hidden;
+}
+.progress-circle::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background-image: url(/assets/img/bg.jpg);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.progress-circle span {
+  width: 351px;
+  height: 426px;
+  background-color: none;
+  border-radius: 50%;
+  position: relative;
+  color: #fff;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: x-large;
+  align-content: space-evenly;
+}
+.correct {
+  margin-top: 10%;
+  text-align: center;
+  font-size: 50px;
+  margin-block: 4em;
+  margin-inline: 8em;
+  display: inline-block;
+  font-weight: 800;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  overflow: hidden;
+}
+.wrong {
+  margin-top: auto;
+  text-align: auto;
+  font-size: 50px;
+  margin-block: 4em;
+  margin-inline: 8em;
+  text-align: center;
+  display: inline-block;
+  font-weight: 800;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  overflow: hidden;
+}
+.button {
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  padding: 30px 60px;
+  text-decoration: none;
+  font-size: 32px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  font-weight: 800;
+  overflow: hidden;
+}
+.button:hover {
+  background-color: #000;
+  color: white;
+}
+.bottone {
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+  margin-top: 20px;
+  text-align: -webkit-center;
+  overflow: hidden;
+}
