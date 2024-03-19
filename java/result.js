@@ -12,7 +12,7 @@ const circleAngle = (correctPercentage / 100) * 360
 circle.style.backgroundImage = `conic-gradient(#00ffff ${circleAngle}deg, #c2128d 0%)`
 
 function redirectToNewPage() {
-  let newPageUrl = "feedbak.html"
+  let newPageUrl = "feedback.html"
 
   window.location.href = newPageUrl
 }
