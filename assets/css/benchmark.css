@@ -8,7 +8,7 @@ main {
 }
 .contatoreQuestion p {
   text-transform: uppercase;
-  margin-top: 45px;
+  margin-top: 22px;
 }
 .coloreContatore {
   color: #d20094;
@@ -17,7 +17,7 @@ main {
   font-size: 80px;
 }
 .contenitoreRisposte {
-  margin: 100px 240px;
+  margin: 100px 240px 35px;
 }
 .contenitoreRisposte button {
   background: linear-gradient(to right, #3a0a4b, #59226d);
@@ -78,7 +78,7 @@ footer {
 }
 footer button {
   text-align: center;
-  height: 150px;
+  height: 100px;
   width: 455px;
 }
 #show-result-button {
