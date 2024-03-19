@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     checkbox.addEventListener("change", toggleButtonVisibility);
     // link per passare alla pagina di benchmark
     button.addEventListener("click", function() {
-      window.location.href = "Settings-Test.html"; 
+      window.location.href = "benchmark.html"; 
       sessionStorage.setItem("refreshIndexPage", "true");
     });
 });
