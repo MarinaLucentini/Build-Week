@@ -15,6 +15,9 @@ h3 {
   margin-left: 20px;
   margin-bottom: 15px;
 }
+p {
+  margin-top: -74px;
+}
 .result-container {
   text-align: center;
 }
@@ -32,7 +35,7 @@ h3 {
   display: inline-block;
   align-items: center;
   padding-block: 0.7em;
-  margin-left: 33%;
+  margin-left: 28%;
   box-shadow: 5px 5px 15px 5px #000000;
   overflow: hidden;
 }
@@ -49,7 +52,7 @@ h3 {
 }
 .progress-circle span {
   width: 351px;
-  height: 449px;
+  height: 426px;
   background-color: none;
   border-radius: 50%;
   position: relative;
@@ -67,11 +70,10 @@ h3 {
 }
 .correct {
   margin-top: 10%;
-  text-align: auto;
+  text-align: center;
   font-size: 50px;
   margin-block: 4em;
   margin-inline: 8em;
-  text-align: start;
   display: inline-block;
   font-weight: 800;
   font-family: 'Outfit', sans-serif;
@@ -86,7 +88,7 @@ h3 {
   font-size: 50px;
   margin-block: 4em;
   margin-inline: 8em;
-  text-align: end;
+  text-align: center;
   display: inline-block;
   font-weight: 800;
   font-family: 'Outfit', sans-serif;
