@@ -880,19 +880,48 @@ function selectButton(button) {
   });
 }
 
+// function startTest() {
+//   // Codice per avviare il test quando il pulsante "Start" è cliccato
+//   alert("Il test è pronto, clicca ok per continuare ed avviare il test.");
+// }
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   const startButton = document.querySelector('.startbutton');
+//   startButton.addEventListener('click', function() {
+//     window.location.href = 'benchmark.html';
+//   });
+// });
+
+//prove funzione filtro in base a bottoni 2
+
 function startTest() {
-  // Codice per avviare il test quando il pulsante "Start" è cliccato
-  alert("Il test è pronto, clicca ok per continuare ed avviare il test.");
+  // Ottenere il testo del pulsante selezionato
+  const selectedButton = document.querySelector('.bottoni2 button.selected');
+  const selectedButtonText = selectedButton.textContent.trim();
+
+  // Filtrare l'array 'questions' in base al testo del pulsante selezionato
+  const filteredQuestions = questions.filter(question => {
+    return question.difficulty === selectedButtonText;
+  });
+
+  // Creare un nuovo array per contenere le domande filtrate
+  const filteredQuestionsArray = [];
+
+  // Push delle domande filtrate nell'array appena creato
+  filteredQuestions.forEach(question => {
+    filteredQuestionsArray.push(question);
+  });
+
+  // Ora puoi fare qualsiasi cosa con l'array di domande filtrate
+  console.log(filteredQuestionsArray);
+  // Esegui altre operazioni qui, come avviare il test con le domande filtrate
 }
 
-//inziamo a filtrare array easy, medium, hard e mix
 
-document.addEventListener('DOMContentLoaded', function() {
-  const startButton = document.querySelector('.startbutton');
-  startButton.addEventListener('click', function() {
-    window.location.href = 'benchmark.html';
-  });
-});
+
+
+
+
 
 
 

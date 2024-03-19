@@ -14,40 +14,43 @@
       rel="stylesheet"
     />
   </head>
-</main>
-<body>
-  <header>
-    <div>
-      <img src="assets/img/epicode_logo.png" alt="logo">
-    </div>
-  </header>
-  <main>
-    <table>
+  <body>
+    <header>
       <div>
-        <h1 class="titoli">Seleziona Modalità di Test</h1>
+        <img src="assets/img/epicode_logo.png" alt="logo" />
       </div>
-      <div>
-        <h2 class="titoli">Seleziona la quantità di domande</h2>
-      </div>
-      <div class="bottoni bottoni1">
-        <button onclick="selectButton(this); checkStartButton()">10</button>
-        <button onclick="selectButton(this); checkStartButton()">20</button>
-        <button onclick="selectButton(this); checkStartButton()">30</button>
-      </div>
-      <div>
-        <h2>Seleziona la difficoltà</h2>
-      </div>
-      <div class="bottoni bottoni2">
-        <button onclick="selectButton(this); checkStartButton()">Easy</button>
-        <button onclick="selectButton(this); checkStartButton()">Medium</button>
-        <button onclick="selectButton(this); checkStartButton()">Hard</button>
-        <button onclick="selectButton(this); checkStartButton()">Mix</button>
-      </div>
-      <div class="start">
-        <button class="startbutton" onclick="startTest()" disabled>Start</button>
-      </div>
-    </table>
-  </main>
+    </header>
+    <main>
+      <table>
+        <div>
+          <h1 class="titoli">Seleziona Modalità di Test</h1>
+        </div>
+        <div>
+          <h2 class="titoli">Seleziona la quantità di domande</h2>
+        </div>
+        <div class="bottoni bottoni1">
+          <button onclick="selectButton(this); checkStartButton()">10</button>
+          <button onclick="selectButton(this); checkStartButton()">20</button>
+          <button onclick="selectButton(this); checkStartButton()">30</button>
+        </div>
+        <div>
+          <h2>Seleziona la difficoltà</h2>
+        </div>
+        <div class="bottoni bottoni2">
+          <button onclick="selectButton(this); checkStartButton()">Easy</button>
+          <button onclick="selectButton(this); checkStartButton()">
+            Medium
+          </button>
+          <button onclick="selectButton(this); checkStartButton()">Hard</button>
+          <button onclick="selectButton(this); checkStartButton()">Mix</button>
+        </div>
+        <div class="start">
+          <button class="startbutton" onclick="startTest()" disabled>
+            Start
+          </button>
+        </div>
+      </table>
+    </main>
     <script src="/java/Settings-Test.js"></script>
   </body>
 </html>
