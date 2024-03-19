@@ -94,66 +94,69 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ];
-// prove genera domande
 
-let index = Math.floor(Math.random() * 11);
-function mostraDomandaErisposte() {
-  const domanda = questions[index];
-  const questionElement = document.querySelector(".Question");
-  const contatoreElement = document.querySelector(".valoreContatore");
-  const risposteElement = document.querySelector(".contenitoreRisposte");
+//------------------------------------------------------------------------------------------------------------------------------------------------
+// // prove genera domande
 
-  // Pulisce il contenitore delle risposte precedenti
-  risposteElement.innerHTML = "";
+// let index = Math.floor(Math.random() * 11);
+// function mostraDomandaErisposte() {
+//   const domanda = questions[index];
+//   const questionElement = document.querySelector(".Question");
+//   const contatoreElement = document.querySelector(".valoreContatore");
+//   const risposteElement = document.querySelector(".contenitoreRisposte");
 
-  // Imposta il testo della domanda e il contatore
-  questionElement.innerHTML = `<h1>${domanda.question}</h1>`;
-  //   contatoreElement.textContent = `${index + 1}`;
+//   // Pulisce il contenitore delle risposte precedenti
+//   risposteElement.innerHTML = "";
 
-  // Combina le risposte corrette e sbagliate e le mescola
-  const tutteLeRisposte = [
-    ...domanda.incorrect_answers,
-    domanda.correct_answer,
-  ];
-  tutteLeRisposte.sort(() => Math.random() - 0.5);
+//   // Imposta il testo della domanda e il contatore
+//   questionElement.innerHTML = `<h1>${domanda.question}</h1>`;
+//   //   contatoreElement.textContent = `${index + 1}`;
 
-  // Crea i bottoni per ogni risposta
-  tutteLeRisposte.forEach((risposta) => {
-    const bottone = document.createElement("button");
-    bottone.textContent = risposta;
-    bottone.classList.add("button-ans"); // Usa qui la classe CSS appropriata per i bottoni
-    risposteElement.appendChild(bottone);
+//   // Combina le risposte corrette e sbagliate e le mescola
+//   const tutteLeRisposte = [
+//     ...domanda.incorrect_answers,
+//     domanda.correct_answer,
+//   ];
+//   tutteLeRisposte.sort(() => Math.random() - 0.5);
 
-    // Eventuale listener per il click sui bottoni
-  });
-}
+//   // Crea i bottoni per ogni risposta
+//   tutteLeRisposte.forEach((risposta) => {
+//     const bottone = document.createElement("button");
+//     bottone.textContent = risposta;
+//     bottone.classList.add("button-ans"); // Usa qui la classe CSS appropriata per i bottoni
+//     risposteElement.appendChild(bottone);
 
-mostraDomandaErisposte(); // Mostra la prima domanda all'apertura della pagina
-// timer
-let counter = 60;
-let progress = 0;
+//     // Eventuale listener per il click sui bottoni
+//   });
+// }
 
-const h4 = document.createElement("h4");
-const containerText = document.getElementById("container-text");
-const second = document.createElement("p");
-const rimanenti = document.createElement("p");
-containerText.append(second, h4, rimanenti);
-h4.classList.add("progress-textH4");
-second.classList.add("progress-textP");
-rimanenti.classList.add("progress-textP");
-second.innerText = "SECONDS";
-rimanenti.innerText = "REMAINING";
-const timer = setInterval(() => {
-  counter--;
-  h4.innerText = " ";
-  h4.innerText = counter;
-  //   questo serve per il countdown dei secondi
-  const progressBar = document.getElementById("progress-bar");
-  progress = progress + 2;
-  progressBar.style.background = `conic-gradient(cyan ${progress}%, #9b9898 0%)`;
+// mostraDomandaErisposte(); // Mostra la prima domanda all'apertura della pagina
+// // timer
+// let counter = 60;
+// let progress = 0;
 
-  if (counter === 0) {
-    clearInterval(timer);
-    // qui inseriamo la funzione per cambiare la domanda
-  }
-}, 900);
+// const h4 = document.createElement("h4");
+// const containerText = document.getElementById("container-text");
+// const second = document.createElement("p");
+// const rimanenti = document.createElement("p");
+// containerText.append(second, h4, rimanenti);
+// h4.classList.add("progress-textH4");
+// second.classList.add("progress-textP");
+// rimanenti.classList.add("progress-textP");
+// second.innerText = "SECONDS";
+// rimanenti.innerText = "REMAINING";
+// const timer = setInterval(() => {
+//   counter--;
+//   h4.innerText = " ";
+//   h4.innerText = counter;
+//   //   questo serve per il countdown dei secondi
+//   const progressBar = document.getElementById("progress-bar");
+//   progress = progress + 2;
+//   progressBar.style.background = `conic-gradient(cyan ${progress}%, #9b9898 0%)`;
+
+//   if (counter === 0) {
+//     clearInterval(timer);
+//     // qui inseriamo la funzione per cambiare la domanda
+//   }
+// }, 900);
+// //------------------------------------------------------------------------------------------------------------------------------------------------
