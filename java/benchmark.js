@@ -1,4 +1,4 @@
-// array di oggetti 
+// array di oggetti
 const questions = [
   {
     category: "Science: Computers",
@@ -66,11 +66,7 @@ const questions = [
     question:
       "What is the code name for the mobile operating system Android 7.0?",
     correct_answer: "Nougat",
-    incorrect_answers: [
-      "Ice Cream Sandwich",
-      "Jelly Bean",
-      "Marshmallow",
-    ],
+    incorrect_answers: ["Ice Cream Sandwich", "Jelly Bean", "Marshmallow"],
   },
   {
     category: "Science: Computers",
@@ -99,44 +95,57 @@ const questions = [
   },
 ];
 // prove genera domande
-function mostraDomandaErisposte(index) {
+
+let index = Math.floor(Math.random() * 11);
+function mostraDomandaErisposte() {
   const domanda = questions[index];
-  const questionElement = document.querySelector('.Question');
-  const contatoreElement = document.querySelector('.valoreContatore');
-  const risposteElement = document.querySelector('.contenitoreRisposte');
+  const questionElement = document.querySelector(".Question");
+  const contatoreElement = document.querySelector(".valoreContatore");
+  const risposteElement = document.querySelector(".contenitoreRisposte");
 
   // Pulisce il contenitore delle risposte precedenti
-  risposteElement.innerHTML = '';
+  risposteElement.innerHTML = "";
 
   // Imposta il testo della domanda e il contatore
   questionElement.innerHTML = `<h1>${domanda.question}</h1>`;
-  contatoreElement.textContent = `${index + 1}`;
+  //   contatoreElement.textContent = `${index + 1}`;
 
   // Combina le risposte corrette e sbagliate e le mescola
-  const tutteLeRisposte = [...domanda.incorrect_answers, domanda.correct_answer];
+  const tutteLeRisposte = [
+    ...domanda.incorrect_answers,
+    domanda.correct_answer,
+  ];
   tutteLeRisposte.sort(() => Math.random() - 0.5);
 
   // Crea i bottoni per ogni risposta
-  tutteLeRisposte.forEach(risposta => {
-      const bottone = document.createElement('button');
-      bottone.textContent = risposta;
-      bottone.classList.add('button-ans'); // Usa qui la classe CSS appropriata per i bottoni
-      risposteElement.appendChild(bottone);
+  tutteLeRisposte.forEach((risposta) => {
+    const bottone = document.createElement("button");
+    bottone.textContent = risposta;
+    bottone.classList.add("button-ans"); // Usa qui la classe CSS appropriata per i bottoni
+    risposteElement.appendChild(bottone);
 
-      // Eventuale listener per il click sui bottoni
+    // Eventuale listener per il click sui bottoni
   });
 }
 
-mostraDomandaErisposte(0); // Mostra la prima domanda all'apertura della pagina
-
-
-// timer 
+mostraDomandaErisposte(); // Mostra la prima domanda all'apertura della pagina
+// timer
 let counter = 60;
 let progress = 0;
 
+const h4 = document.createElement("h4");
+const containerText = document.getElementById("container-text");
+const second = document.createElement("p");
+const rimanenti = document.createElement("p");
+containerText.append(second, h4, rimanenti);
+h4.classList.add("progress-textH4");
+second.classList.add("progress-textP");
+rimanenti.classList.add("progress-textP");
+second.innerText = "SECONDS";
+rimanenti.innerText = "REMAINING";
 const timer = setInterval(() => {
-  const h4 = document.getElementById("second");
   counter--;
+  h4.innerText = " ";
   h4.innerText = counter;
   //   questo serve per il countdown dei secondi
   const progressBar = document.getElementById("progress-bar");
