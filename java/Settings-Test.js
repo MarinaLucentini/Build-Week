@@ -880,6 +880,7 @@ function checkStartButton() {
   //   // Codice per avviare il test quando il pulsante "Start" è cliccato
   //   alert("Il test è pronto, clicca ok per continuare ed avviare il test.");
   // }
+  
   //inizio funzione che in base al settaggio dato genera un array corrispondente alla quantità selezionata e la difficolta selezionata all'interno di benchmark.html 
 
   function startTest() {
