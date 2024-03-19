@@ -1,5 +1,5 @@
 const totalQuestions = 10
-const correctAnswers = 8
+const correctAnswers = 6.7
 
 const correctPercentage = (correctAnswers / totalQuestions) * 100
 const wrongPercentage = 100 - correctPercentage
@@ -16,3 +16,5 @@ function redirectToNewPage() {
 
   window.location.href = newPageUrl
 }
+
+document.getElementById('frase').style.color = 'cyan'

@@ -34,6 +34,7 @@ h3 {
   padding-block: 0.7em;
   margin-left: 33%;
   box-shadow: 5px 5px 15px 5px #000000;
+  overflow: hidden;
 }
 .progress-circle::before {
   content: '';
@@ -44,10 +45,11 @@ h3 {
   height: 80%;
   background-image: url(/assets/img/bg.jpg);
   border-radius: 50%;
+  overflow: hidden;
 }
 .progress-circle span {
-  width: 200px;
-  height: 450px;
+  width: 351px;
+  height: 449px;
   background-color: none;
   border-radius: 50%;
   position: relative;
@@ -61,6 +63,7 @@ h3 {
   font-weight: weight;
   font-style: normal;
   font-size: x-large;
+  align-content: space-evenly;
 }
 .correct {
   margin-top: 10%;
@@ -75,6 +78,7 @@ h3 {
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
+  overflow: hidden;
 }
 .wrong {
   margin-top: auto;
@@ -89,6 +93,7 @@ h3 {
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
+  overflow: hidden;
 }
 .button {
   border: 2px solid white;
@@ -100,6 +105,7 @@ h3 {
   cursor: pointer;
   transition-duration: 0.4s;
   font-weight: 800;
+  overflow: hidden;
 }
 .button:hover {
   background-color: #000;
@@ -113,4 +119,5 @@ h3 {
   text-align: center;
   margin-top: 20px;
   text-align: -webkit-center;
+  overflow: hidden;
 }

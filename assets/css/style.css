@@ -17,6 +17,7 @@ main {
   margin-block: 3em;
   margin-inline: 8em;
   text-align: center;
+  line-height: normal;
 }
 header div img {
   width: 15%;
