@@ -21,7 +21,7 @@ header div img {
 
 /*FEEDBACK PAGE */
 
-.txtFeedbackSection h2 {
+.feedbackText h2 {
   color: white;
   margin-top: 80px;
   text-align: center;
@@ -29,7 +29,7 @@ header div img {
   font-weight: bold;
   font-family: "Outfit", sans-serif;
 }
-.txtFeedbackSection p {
+.feedbackText p {
   color: white;
   text-align: center;
   font-size: 1.7rem;
@@ -59,7 +59,7 @@ header div img {
 .feedbackArea {
   text-align: center;
 }
-#feedbackText {
+#formFeedbackText {
   margin-top: 40px;
   height: 30px;
   width: 100vh;
@@ -68,14 +68,14 @@ header div img {
   color: white;
   background-color: transparent;
 }
-.infoBtn {
+.infoButton {
   text-align: center;
   margin-top: 5em;
 }
-.infoBtn button:hover {
+.infoButton button:hover {
   background-color: #79ececfc;
 }
-.infoBtn button {
+.infoButton button {
   width: 200px;
   height: 60px;
   background-color: #00ffff;
