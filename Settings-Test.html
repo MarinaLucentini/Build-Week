@@ -30,21 +30,21 @@
         <h2 class="titoli">Seleziona la quantità di domande</h2>
       </div>
       <div class="bottoni bottoni1">
-        <button onclick="selectButton(this)">10</button>
-        <button onclick="selectButton(this)">20</button>
-        <button onclick="selectButton(this)">30</button>
+        <button onclick="selectButton(this); checkStartButton()">10</button>
+        <button onclick="selectButton(this); checkStartButton()">20</button>
+        <button onclick="selectButton(this); checkStartButton()">30</button>
       </div>
       <div>
         <h2>Seleziona la difficoltà</h2>
       </div>
       <div class="bottoni bottoni2">
-        <button onclick="selectButton(this)">Easy</button>
-        <button onclick="selectButton(this)">Medium</button>
-        <button onclick="selectButton(this)">Hard</button>
-        <button onclick="selectButton(this)">Mix</button>
+        <button onclick="selectButton(this); checkStartButton()">Easy</button>
+        <button onclick="selectButton(this); checkStartButton()">Medium</button>
+        <button onclick="selectButton(this); checkStartButton()">Hard</button>
+        <button onclick="selectButton(this); checkStartButton()">Mix</button>
       </div>
       <div class="start">
-        <button class="startbutton">Start</button>
+        <button class="startbutton" onclick="startTest()" disabled>Start</button>
       </div>
     </table>
   </main>
