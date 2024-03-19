@@ -1,26 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap");
 body {
-  background-image: url(/assets/img/bg.jpg);
+  background-image: url("../img/bg.jpg");
   background-size: cover;
 
   height: 100vh;
   background-repeat: no-repeat;
-  font-family: "Inter", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   color: white;
-}
-main {
-  text-align: center;
 }
 header,
 main {
   margin-block: 4em;
   margin-inline: 8em;
 }
-main {
-  margin-block: 7em;
-}
 header div img {
   width: 15%;
   height: auto;
-  display: inline-block;
+  display: block;
 }
