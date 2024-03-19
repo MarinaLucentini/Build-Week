@@ -20,17 +20,33 @@
       </div>
     </header>
     <main>
-      <table>
-        <div class="Question" id="question"></div>
-        <div class="contenitoreRisposte"></div>
+      <div class="Question" id="question"></div>
+      <div class="contenitoreRisposte"></div>
+      <footer>
         <div class="contatoreQuestion">
           <p>
             <span>question </span><span class="valoreContatore"></span
             ><span class="coloreContatore"> / 10</span>
           </p>
         </div>
-      </table>
+
+        <button class="button-question" id="next-question">
+          Prossima
+          <ion-icon
+            name="arrow-forward-outline"
+            style="color: white"
+          ></ion-icon>
+        </button>
+      </footer>
     </main>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <script src="/java/benchmark.js"></script>
   </body>
 </html>
