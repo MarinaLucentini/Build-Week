@@ -188,8 +188,10 @@ function nextQuestion() {
         footer.appendChild(showResultButton);
         showResultButton.addEventListener("click", () => {
           console.log("Hai completato tutte le domande!");
-          window.location.href = "result.html"; // Redirigi verso la pagina dei risultati
+          window.location.href = "provadeirisultatiarray.html"; // Redirigi verso la pagina dei risultati
         });
+        // Salva l'array results nei dati di sessione dopo che l'utente ha completato il quiz
+        sessionStorage.setItem('results', JSON.stringify(results));
       } else {
         // Se non siamo all'ultima domanda, mostra la prossima domanda
         nextQuestion();
@@ -197,6 +199,8 @@ function nextQuestion() {
     });
   });
 }
+
+// Chiama la funzione startTimer per avviare il quiz
+startTimer();
 nextQuestion();
 console.log("dcscfd", results)
-
