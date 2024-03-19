@@ -59,6 +59,7 @@ h3 {
   height: 80%;
   background-image: url(/assets/img/bg.jpg);
   border-radius: 50%;
+  text-align: center;
 }
 .progress-circle span {
   width: 351px;
