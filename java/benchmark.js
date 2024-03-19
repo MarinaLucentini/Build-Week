@@ -97,43 +97,71 @@ const questions = [
 
 // prove genera domande
 
-let index = Math.floor(Math.random() * 11);
-function mostraDomandaErisposte() {
-  const domanda = questions[index];
-  const questionElement = document.querySelector(".Question");
-  const contatoreElement = document.querySelector(".valoreContatore");
-  const risposteElement = document.querySelector(".contenitoreRisposte");
+let index = 0;
+index = Math.floor(Math.random() * 11);
+// adesso voglio creare la funzione del bottone
+// function nextQuestion() {
+//   const contatoreElement = document.querySelector(".valoreContatore");
+//   const risposteElement = document.querySelector(".contenitoreRisposte");
 
-  // Pulisce il contenitore delle risposte precedenti
-  risposteElement.innerHTML = "";
+//   // Pulisce il contenitore delle risposte precedenti
+//   risposteElement.innerHTML = "";
 
-  // Imposta il testo della domanda e il contatore
-  questionElement.innerHTML = `<h1>${domanda.question}</h1>`;
-  //   contatoreElement.textContent = `${index + 1}`;
+//   // Imposta il testo della domanda e il contatore
+//   questionElement.innerHTML = `<h1>${domanda.question}</h1>`;
+//   //   contatoreElement.textContent = `${index + 1}`;
 
-  // Combina le risposte corrette e sbagliate e le mescola
-  const tutteLeRisposte = [
-    ...domanda.incorrect_answers,
-    domanda.correct_answer,
-  ];
-  tutteLeRisposte.sort(() => Math.random() - 0.5);
+//   // Combina le risposte corrette e sbagliate e le mescola
+//   const tutteLeRisposte = [
+//     ...domanda.incorrect_answers,
+//     domanda.correct_answer,
+//   ];
+//   tutteLeRisposte.sort(() => Math.random() - 0.5);
 
-  // Crea i bottoni per ogni risposta
+//   // Crea i bottoni per ogni risposta
 
-  tutteLeRisposte.forEach((risposta) => {
-    const bottone = document.createElement("button");
+//   tutteLeRisposte.forEach((risposta) => {
+//     const bottone = document.createElement("button");
 
-    bottone.textContent = risposta;
+//     bottone.textContent = risposta;
 
-    bottone.classList.add("button-ans");
-    //   Usa qui la classe CSS appropriata per i bottoni
-    risposteElement.appendChild(bottone);
+//     bottone.classList.add("button-ans");
+//     //   Usa qui la classe CSS appropriata per i bottoni
+//     risposteElement.appendChild(bottone);
 
-    // Eventuale listener per il click sui bottoni
-  });
-}
+// Eventuale listener per il click sui bottoni
 
-mostraDomandaErisposte(); // Mostra la prima domanda all'apertura della pagina
+// // function mostraDomandaErisposte() {
+// //   const domanda = questions[index];
+// //   const questionElement = document.querySelector(".Question");
+// //   const risposteElement = document.querySelector(".contenitoreRisposte");
+
+// //   // Pulisce il contenitore delle risposte precedenti
+// //   risposteElement.innerHTML = "";
+
+// //   // Imposta il testo della domanda e il contatore
+// //   questionElement.innerHTML = `<h1>${domanda.question}</h1>`;
+
+// //   // Combina le risposte corrette e sbagliate e le mescola
+// //   const tutteLeRisposte = [
+// //     ...domanda.incorrect_answers,
+// //     domanda.correct_answer,
+// //   ];
+// //   tutteLeRisposte.sort(() => Math.random() - 0.5);
+
+// //   // Crea i bottoni per ogni risposta
+// //   tutteLeRisposte.forEach((risposta) => {
+// //     const bottone = document.createElement("button");
+// //     bottone.textContent = risposta;
+// //     bottone.classList.add("button-ans"); // Usa qui la classe CSS appropriata per i bottoni
+// //     risposteElement.appendChild(bottone);
+
+// //     // Eventuale listener per il click sui bottoni
+// //   });
+// // }
+// // mostraDomandaErisposte();
+
+// Mostra la prima domanda all'apertura della pagina
 // timer
 let counter = 60;
 let progress = 0;
@@ -159,6 +187,5 @@ const timer = setInterval(() => {
 
   if (counter === 0) {
     clearInterval(timer);
-    // qui inseriamo la funzione per cambiare la domanda
   }
 }, 900);
