@@ -116,8 +116,8 @@ rimanenti.innerText = "REMAINING";
 // Funzione per avviare il timer
 function startTimer() {
   clearInterval(timer);
-  counter = 60;
-  progress = -19;
+  counter = 50;
+  progress = 0;
   timer = setInterval(() => {
     counter--;
     h4.innerText = counter;
@@ -136,7 +136,7 @@ function startTimer() {
         console.log("Hai completato tutte le domande!");
       }
     }
-  }, 100);
+  }, 1000);
 }
 
 // Variabile per tenere traccia dell'indice della domanda corrente
@@ -171,20 +171,21 @@ function nextQuestion() {
       index++;
       if (index < questions.length) {
         nextQuestion();
+      } else {
+        // Se siamo all'ultima domanda, aggiungi il pulsante per mostrare i risultati
+        const footer = document.querySelector('footer');
+        const showResultButton = document.createElement("button");
+        showResultButton.textContent = "MOSTRA RISULTATO TEST";
+        showResultButton.id = "show-result-button";
+        showResultButton.classList.add("button-ans");
+        footer.innerHTML = ""; // Rimuovi eventuali vecchi pulsanti nel footer
+        footer.appendChild(showResultButton);
+        showResultButton.addEventListener("click", () => {
+          window.location.href = "result.html"; // Redirigi verso la pagina dei risultati
+        });
       }
     });
   });
-  if (index === questions.length - 1) {
-    const footer = document.querySelector('footer');
-    const showResultButton = document.createElement("button");
-    showResultButton.textContent = "MOSTRA RISULTATO TEST";
-    showResultButton.id = "show-result-button";
-    showResultButton.classList.add("button-ans");
-    footer.appendChild(showResultButton);
-    showResultButton.addEventListener("click", () => {
-      window.location.href = "result.html";
-    });
-  }
 }
 nextQuestion();
 console.log("dcscfd", results)
