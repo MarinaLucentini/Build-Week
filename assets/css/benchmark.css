@@ -1,4 +1,7 @@
 /* inizio modifiche  */
+main {
+  text-align: center;
+}
 .contatoreQuestion {
   font-size: 40px;
   text-transform: uppercase;
@@ -13,14 +16,14 @@
   font-size: 80px;
 }
 .contenitoreRisposte {
-  margin: 150px 0px;
+  margin: 100px 240px;
 }
 .contenitoreRisposte button {
   background: linear-gradient(to right, #3a0a4b, #59226d);
-  box-shadow: -4px -3px 6px white;
+  box-shadow: -1px -1px 3px white;
   height: 100px;
-  width: 500px;
-  margin: 15px 70px;
+  width: 400px;
+  margin: 20px 50px;
   border-radius: 150px;
   font-size: 26px;
   font-weight: bold;
@@ -35,7 +38,7 @@
   border-radius: 50%;
   width: 11rem;
   height: 11rem;
-  margin-left: 75%;
+  margin-left: 90%;
   background: linear-gradient(to right, #00ffff 0%, grey 0%);
   text-align: center;
   display: inline-block;
@@ -59,11 +62,8 @@
   font-size: 2em;
 }
 footer {
-  display: flex;
-  justify-content: space-between;
-  margin-block: 1.5em;
+  text-align: center;
 }
-
 .button-question {
   border: 1px solid white;
   color: white;
