@@ -1,5 +1,5 @@
 const questions = [
-    // inzio easy
+    // inzio easy -------------------------------------------------------------------------------------------------------------------
   {
     type: "multiple",
     difficulty: "easy",
@@ -275,7 +275,7 @@ const questions = [
     correct_answer: "Moving Picture",
     incorrect_answers: ["Music Player", "Multi Pass", "Micro Point"],
   },
-  //   fine easy e inizio medium
+  //   fine easy e inizio medium -------------------------------------------------------------------------------------------------------------------
   {
     type: "multiple",
     difficulty: "medium",
@@ -561,7 +561,7 @@ const questions = [
     correct_answer: "True",
     incorrect_answers: ["False"],
   },
-  //   fine medium e inizio hard
+  //   fine medium e inizio hard -------------------------------------------------------------------------------------------------------------------
   {
     type: "multiple",
     difficulty: "hard",
@@ -850,5 +850,5 @@ const questions = [
     correct_answer: "IRC",
     incorrect_answers: ["HTTP", "HTTPS", "FTP"],
   },
-  //   fine hard
+  //   fine hard -------------------------------------------------------------------------------------------------------------------
 ]
