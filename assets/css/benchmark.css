@@ -16,11 +16,45 @@
   margin: 150px 0px;
 }
 .contenitoreRisposte button {
-  background-color: aqua;
+  background: linear-gradient(to right, #3a0a4b, #59226d);
+  box-shadow: -4px -3px 6px white;
   height: 100px;
-  width: 550px;
-  margin: 15px 15px;
+  width: 500px;
+  margin: 15px 70px;
   border-radius: 150px;
   font-size: 26px;
   font-weight: bold;
+  color: white;
+}
+.contenitoreRisposte button:hover {
+  background: linear-gradient(to right, #59226d, #d20094);
+}
+
+.external-circle {
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  margin-left: 75%;
+  background: linear-gradient(to right, #00ffff 0%, grey 0%);
+  text-align: center;
+  display: inline-block;
+}
+.internal-circle {
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  margin-block: 1em;
+  background: radial-gradient(#59226d, black);
+  text-align: center;
+  display: inline-block;
+}
+.text-circle {
+  margin-block: 0.8em;
+}
+.progress-textP {
+  font-size: 0.5em;
+}
+.progress-textH4 {
+  font-size: 2em;
 }
