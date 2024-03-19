@@ -148,13 +148,20 @@ function nextQuestion() {
   const questionElement = document.querySelector(".Question");
   const risposteElement = document.querySelector(".contenitoreRisposte");
   risposteElement.innerHTML = "";
-  startTimer();
+  // Controlla se siamo all'ultima domanda
+  if (index === questions.length - 1) {
+    // Se siamo all'ultima domanda, ferma il timer
+    clearInterval(timer);
+  } else {
+    // Se non siamo all'ultima domanda, avvia il timer per la prossima domanda
+    startTimer();
+  }
   const domanda = questions[index];
   questionElement.innerHTML = `<h1>${domanda.question}</h1>`;
   contatoreElement.textContent = `${index + 1}`;
   const tutteLeRisposte = [...domanda.incorrect_answers, domanda.correct_answer];
   tutteLeRisposte.sort(() => Math.random() - 0.5);
-  tutteLeRisposte.forEach((risposta) => {
+  tutteLeRisposte.forEach((risposta, rispostaIndex) => {
     const bottone = document.createElement("button");
     bottone.textContent = risposta;
     bottone.classList.add("button-ans");
@@ -169,9 +176,8 @@ function nextQuestion() {
         isCorrect: isCorrect
       });
       index++;
-      if (index < questions.length) {
-        nextQuestion();
-      } else {
+      // Controlla se siamo all'ultima domanda
+      if (index === questions.length) {
         // Se siamo all'ultima domanda, aggiungi il pulsante per mostrare i risultati
         const footer = document.querySelector('footer');
         const showResultButton = document.createElement("button");
@@ -181,11 +187,16 @@ function nextQuestion() {
         footer.innerHTML = ""; // Rimuovi eventuali vecchi pulsanti nel footer
         footer.appendChild(showResultButton);
         showResultButton.addEventListener("click", () => {
+          console.log("Hai completato tutte le domande!");
           window.location.href = "result.html"; // Redirigi verso la pagina dei risultati
         });
+      } else {
+        // Se non siamo all'ultima domanda, mostra la prossima domanda
+        nextQuestion();
       }
     });
   });
 }
 nextQuestion();
 console.log("dcscfd", results)
+
