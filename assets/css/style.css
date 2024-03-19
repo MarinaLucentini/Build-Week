@@ -10,14 +10,11 @@ body {
   background-repeat: no-repeat;
   font-family: 'Times New Roman', Times, serif;
   color: white;
-  display: grid;
 }
 header,
 main {
-  margin-block: 3em;
+  margin-block: 4em;
   margin-inline: 8em;
-  text-align: center;
-  line-height: normal;
 }
 header div img {
   width: 15%;
