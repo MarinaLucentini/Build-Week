@@ -89,96 +89,95 @@ const questions = [
       "According to the International System of Units, how many bytes are in a kilobyte of RAM?",
     correct_answer: "1000",
     incorrect_answers: ["512", "1024", "500"],
-  }
+  },
   // Altre domande...
-];
+]
 
 // Codice per il timer
-let counter = 60;
-let progress = 0;
+let counter = 60
+let progress = 0
 
-const h4 = document.createElement("h4");
-const containerText = document.getElementById("container-text");
-const second = document.createElement("p");
-const rimanenti = document.createElement("p");
-containerText.append(second, h4, rimanenti);
-h4.classList.add("progress-textH4");
-second.classList.add("progress-textP");
-rimanenti.classList.add("progress-textP");
-second.innerText = "SECONDS";
-rimanenti.innerText = "REMAINING";
+const h4 = document.createElement("h4")
+const containerText = document.getElementById("container-text")
+const second = document.createElement("p")
+const rimanenti = document.createElement("p")
+containerText.append(second, h4, rimanenti)
+h4.classList.add("progress-textH4")
+second.classList.add("progress-textP")
+rimanenti.classList.add("progress-textP")
+second.innerText = "SECONDS"
+rimanenti.innerText = "REMAINING"
 const timer = setInterval(() => {
-  counter--;
-  h4.innerText = " ";
-  h4.innerText = counter;
+  counter--
+  h4.innerText = " "
+  h4.innerText = counter
   // Questo serve per il countdown dei secondi
-  const progressBar = document.getElementById("progress-bar");
-  progress = progress + 2;
-  progressBar.style.background = `conic-gradient(cyan ${progress}%, #9b9898 0%)`;
+  const progressBar = document.getElementById("progress-bar")
+  progress = progress + 2
+  progressBar.style.background = `conic-gradient(cyan ${progress}%, #9b9898 0%)`
 
   if (counter === 0) {
-    clearInterval(timer);
-    console.log("Tempo scaduto!");
+    clearInterval(timer)
+    console.log("Tempo scaduto!")
     // Puoi aggiungere qui la logica per gestire il tempo scaduto
   }
-}, 900);
-
+}, 1000)
 
 // Variabile per tenere traccia dell'indice della domanda corrente
-let index = 0;
+let index = 0
 
 // Funzione per mostrare la prossima domanda
 function nextQuestion() {
-  const contatoreElement = document.querySelector(".valoreContatore");
-  const questionElement = document.querySelector(".Question");
-  const risposteElement = document.querySelector(".contenitoreRisposte");
+  const contatoreElement = document.querySelector(".valoreContatore")
+  const questionElement = document.querySelector(".Question")
+  const risposteElement = document.querySelector(".contenitoreRisposte")
 
   // Pulisce il contenitore delle risposte precedenti
-  risposteElement.innerHTML = "";
+  risposteElement.innerHTML = ""
+
+  // Reimposta il timer
+  counter = 60
+  progress = 0
 
   // Ottiene la domanda corrente
-  const domanda = questions[index];
+  const domanda = questions[index]
 
   // Imposta il testo della domanda e il contatore
-  questionElement.innerHTML = `<h1>${domanda.question}</h1>`;
-  contatoreElement.textContent = `${index + 1}`;
+  questionElement.innerHTML = `<h1>${domanda.question}</h1>`
+  contatoreElement.textContent = `${index + 1}`
 
   // Combina le risposte corrette e sbagliate e le mescola
-  const tutteLeRisposte = [
-    ...domanda.incorrect_answers,
-    domanda.correct_answer,
-  ];
-  tutteLeRisposte.sort(() => Math.random() - 0.5);
+  const tutteLeRisposte = [...domanda.incorrect_answers, domanda.correct_answer]
+  tutteLeRisposte.sort(() => Math.random() - 0.5)
 
   // Crea i bottoni per ogni risposta
   tutteLeRisposte.forEach((risposta) => {
-    const bottone = document.createElement("button");
-    bottone.textContent = risposta;
-    bottone.classList.add("button-ans"); // Usa qui la classe CSS appropriata per i bottoni
-    risposteElement.appendChild(bottone);
+    const bottone = document.createElement("button")
+    bottone.textContent = risposta
+    bottone.classList.add("button-ans") // Usa qui la classe CSS appropriata per i bottoni
+    risposteElement.appendChild(bottone)
 
     // Eventuale listener per il click sui bottoni
     bottone.addEventListener("click", () => {
       // Qui puoi gestire la logica per verificare se la risposta è corretta o sbagliata
       // Ad esempio:
       if (risposta === domanda.correct_answer) {
-        console.log("Risposta corretta!");
+        console.log("Risposta corretta!")
       } else {
-        console.log("Risposta sbagliata!");
+        console.log("Risposta sbagliata!")
       }
 
       // Passa alla prossima domanda
-      index++;
+      index++
       if (index < questions.length) {
-        nextQuestion();
+        nextQuestion()
       } else {
-        console.log("Hai completato tutte le domande!");
+        console.log("Hai completato tutte le domande!")
         // Puoi aggiungere qui la logica per mostrare il punteggio finale o fare altre azioni
       }
-    });
-  });
+    })
+  })
 }
 
 // Mostra la prima domanda all'apertura della pagina
-nextQuestion();
-
+nextQuestion()
