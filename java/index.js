@@ -1,5 +1,5 @@
 const totalQuestions = 10
-const correctAnswers = 9
+const correctAnswers = 8
 
 const correctPercentage = (correctAnswers / totalQuestions) * 100
 const wrongPercentage = 100 - correctPercentage

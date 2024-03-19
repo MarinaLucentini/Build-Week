@@ -14,8 +14,9 @@ body {
 }
 header,
 main {
-  margin-block: 4em;
+  margin-block: 3em;
   margin-inline: 8em;
+  text-align: center;
 }
 header div img {
   width: 15%;
