@@ -26,15 +26,15 @@
   font-weight: bold;
   color: white;
 }
-.contenitoreRisposte button:hover {
+.contenitoreRisposte button:hover,
+.button-question:hover {
   background: linear-gradient(to right, #59226d, #d20094);
 }
 
 .external-circle {
-  border: 1px solid white;
   border-radius: 50%;
-  width: 7rem;
-  height: 7rem;
+  width: 11rem;
+  height: 11rem;
   margin-left: 75%;
   background: linear-gradient(to right, #00ffff 0%, grey 0%);
   text-align: center;
@@ -42,19 +42,35 @@
 }
 .internal-circle {
   border-radius: 50%;
-  width: 5em;
-  height: 5em;
-  margin-block: 1em;
+  width: 8em;
+  height: 8em;
+  margin-block: 1.6em;
   background: radial-gradient(#59226d, black);
   text-align: center;
   display: inline-block;
 }
 .text-circle {
-  margin-block: 0.8em;
+  margin-block: 2em;
 }
 .progress-textP {
   font-size: 0.5em;
 }
 .progress-textH4 {
   font-size: 2em;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 1.5em;
+}
+
+.button-question {
+  border: 1px solid white;
+  color: white;
+  height: 100px;
+  width: 500px;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 2em;
+  margin-bottom: 2em;
 }
