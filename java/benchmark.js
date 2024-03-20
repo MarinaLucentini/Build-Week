@@ -144,27 +144,17 @@ nextQuestion();
 let counter = 60;
 let progress = 0;
 const timercontainer = () => {
-  const timercontainerHeader = document.querySelector("header");
+  const timercontainer = document.getElementById("container");
   const timerbar = document.createElement("div");
-  timercontainerHeader.appendChild(timerbar);
+  timercontainer.appendChild(timerbar);
   timerbar.classList.add("external-circle");
   timerbar.id = "progress-bar";
-  const h4 = document.createElement("h4");
-  const second = document.createElement("p");
-  const rimanenti = document.createElement("p");
-  const textContainer = document.createElement("div");
-  timerbar.appendChild(textContainer);
-  textContainer.classList.add("text-circle");
-  h4.classList.add("progress-textH4");
-  second.classList.add("progress-textP");
-  rimanenti.classList.add("progress-textP");
-  second.innerText = "SECONDS";
-  rimanenti.innerText = "REMAINING";
-  textContainer.append(second, h4, rimanenti);
+  const seconds = document.getElementById("second");
+
   const timer = setInterval(() => {
     counter--;
-    h4.innerText = " ";
-    h4.innerText = counter;
+    seconds.innerText = " ";
+    seconds.innerText = counter;
     //   questo serve per il countdown dei secondi
     const progressBar = document.getElementById("progress-bar");
     progress = progress + 2;

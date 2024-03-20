@@ -38,13 +38,24 @@
   margin-left: 75%;
   background: linear-gradient(to right, #00ffff 0%, grey 0%);
   mask-image: radial-gradient(circle at center, transparent 50px, white 51px);
-  text-align: center;
-  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  left: 50px;
 }
-
+#container {
+  display: flex;
+  flex-direction: column;
+}
 .text-circle {
   margin-block: 2em;
   margin-left: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 81px;
+  left: 118px;
 }
 .progress-textP {
   font-size: 0.5em;
