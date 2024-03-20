@@ -38,7 +38,19 @@ document.getElementsByClassName('risultatiCorretti')[0].innerHTML = `<h6><span c
 document.getElementsByClassName('risultatiSbagliati')[0].innerHTML = `<h6><span class="correct">Wrong</span><br/><span class="percentuale">${percentualeSbagliate}%</span><br/><span class="totSuTot">${risposteSbagliate}/${totaleDomande} Questions</span></h6>`;
 
 // Determina il messaggio in base alla percentuale di risposte corrette
-const messaggioEsito = percentualeCorrette >= 60 ? "Complimenti, hai superato l'esame!" : "Mi dispiace, non hai superato il test.";
+const messaggioEsito = percentualeCorrette >= 60 ? "Congratulations!" : "I am sorry";
+const messaggioEsito2 = percentualeCorrette >= 60 ? "You passed the exam." : "You failed the test.";
+//prove
+console.log(messaggioEsito)
+console.log(messaggioEsito2)
 
 // Aggiorna il documento HTML con il messaggio di esito
-document.getElementsByClassName('testoInternoGrafico').innerHTML = messaggioEsito 
+document.getElementsByClassName('testoInternoGrafico')[0].innerHTML = `<h3>${messaggioEsito}</h3></br><h4>${messaggioEsito2}</h4><h5>We'll send you the certificate<br />in few minutes.<br />
+check your email (including<br />promotions/ spam folder)</h5>`
+
+//reazione al click che ti porta alla pagina feedback
+const button = document.querySelector(".bottoneRateUs");
+button.addEventListener("click", function() {
+  window.location.href = "feedback.html"; 
+  sessionStorage.setItem("refreshIndexPage", "true");
+})
