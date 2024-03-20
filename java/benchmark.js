@@ -169,6 +169,7 @@ function nextQuestion() {
     bottone.addEventListener("click", () => {
       let isCorrect = risposta === domanda.correct_answer;
       console.log(isCorrect ? "Risposta corretta!" : "Risposta sbagliata!");
+      //dove vengono push i dati inerenti alle risposte
       results.push({
         question: domanda.question,
         selectedAnswer: risposta,
@@ -203,4 +204,4 @@ function nextQuestion() {
 // Chiama la funzione startTimer per avviare il quiz
 startTimer();
 nextQuestion();
-console.log("dcscfd", results)
+console.log("Array da riempire", results)
