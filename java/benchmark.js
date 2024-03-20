@@ -143,7 +143,7 @@ function startTimer() {
         // Mostra risultati o qualsiasi altra logica di conclusione
       }
     }
-  }, 50);
+  }, 1000);
 }
 
 
