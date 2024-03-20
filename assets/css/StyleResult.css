@@ -30,14 +30,14 @@ body {
   margin-left: 180px;
 }
 .testoInternoGrafico {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: inline-block;
+  height: 137px;
   position: relative;
 
   top: 79px;
   left: 19px;
 }
+
 .testoInternoGrafico h3,
 h4 {
   font-size: 20px;
@@ -67,11 +67,11 @@ h6 {
 }
 .risultatiCorretti {
   position: relative;
-  top: -112px;
+  top: 83px;
 }
 .risultatiSbagliati {
   position: relative;
-  top: -112px;
+  top: 83px;
 }
 .risultatiCorretti h6 {
   text-align: left;
@@ -98,6 +98,7 @@ h6 .totSuTot {
 .contenitoreRateUs {
   display: flex;
   justify-content: center;
+  margin-top: 235px;
 }
 .container-list {
   margin-block: 2em;
@@ -109,4 +110,7 @@ h6 .totSuTot {
   list-style-type: disc;
   padding: 2em;
   list-style-position: inside;
+}
+.answer {
+  margin-block: 0.4em;
 }
