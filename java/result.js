@@ -86,18 +86,18 @@ grafic();
 const list = () => {
   const listAnswer = document.getElementById("list");
   for (let i = 0; i < results.length; i++) {
-    const answers = document.createElement("li");
-    listAnswer.appendChild(answers);
-    answers.innerText =
-      "Question" +
-      " " +
-      results[i].question +
-      "Selected answer" +
-      " " +
-      results[i].selectedAnswer +
-      "Correct answer" +
-      " " +
-      results[i].correctAnswer;
+    const questions = document.createElement("ul");
+    listAnswer.appendChild(questions);
+    const selectedAnswer = document.createElement("li");
+    questions.appendChild(selectedAnswer);
+    questions.innerText = "Question" + " " + results[i].question;
+    selectedAnswer.innerText = `Selected answer ${results[i].selectedAnswer}`;
+    // "Selected answer" +
+    // " " +
+    // results[i].selectedAnswer +
+    // "Correct answer" +
+    // " " +
+    // results[i].correctAnswer;
   }
 };
 list();

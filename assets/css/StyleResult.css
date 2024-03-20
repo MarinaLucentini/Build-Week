@@ -35,7 +35,7 @@ body {
   justify-content: center;
   position: relative;
 
-  top: 176px;
+  top: 79px;
   left: 19px;
 }
 .testoInternoGrafico h3,
@@ -65,7 +65,14 @@ h4 {
 h6 {
   width: 150px;
 }
-
+.risultatiCorretti {
+  position: relative;
+  top: -112px;
+}
+.risultatiSbagliati {
+  position: relative;
+  top: -112px;
+}
 .risultatiCorretti h6 {
   text-align: left;
 }
