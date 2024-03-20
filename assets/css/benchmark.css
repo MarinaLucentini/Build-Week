@@ -34,27 +34,23 @@ main {
 .button-question:hover {
   background: linear-gradient(to right, #59226d, #d20094);
 }
-
+.circle1 {
+  position: relative;
+}
+.timerText1 {
+  position: absolute;
+  top: 33%;
+  left: 3.5em;
+}
 .external-circle {
   border-radius: 50%;
-  width: 11rem;
-  height: 11rem;
+  width: 10rem;
+  height: 10rem;
+  mask-image: radial-gradient(circle at center, transparent 50px, white 51px);
+}
+.containerTimer {
   margin-left: 90%;
-  background: linear-gradient(to right, #00ffff 0%, grey 0%);
-  text-align: center;
-  display: inline-block;
-}
-.internal-circle {
-  border-radius: 50%;
-  width: 8em;
-  height: 8em;
-  margin-block: 1.6em;
-  background: radial-gradient(#59226d, black);
-  text-align: center;
-  display: inline-block;
-}
-.text-circle {
-  margin-block: 2em;
+  margin-bottom: 8em;
 }
 .progress-textP {
   font-size: 0.5em;
