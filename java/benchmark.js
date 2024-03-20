@@ -141,7 +141,7 @@ nextQuestion();
 
 // Mostra la prima domanda all'apertura della pagina
 // timer
-let counter = 60;
+let counter = 50;
 let progress = 0;
 const timercontainer = () => {
   const timercontainer = document.getElementById("container");
