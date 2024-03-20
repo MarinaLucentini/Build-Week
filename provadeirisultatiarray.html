@@ -8,34 +8,29 @@
       body {
         font-family: Arial, sans-serif;
         margin: 20px;
-      }
-
-      h1 {
+        margin: 50px 700px;
         text-align: center;
       }
-
       table {
         width: 100%;
         border-collapse: collapse;
         margin-top: 20px;
       }
-
       table,
       th,
       td {
         border: 1px solid #ddd;
       }
-
       th,
       td {
         padding: 10px;
-        text-align: left;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
       }
-
       thead {
         background-color: #f2f2f2;
       }
-
       tbody tr:nth-child(even) {
         background-color: #f2f2f2;
       }
@@ -52,17 +47,12 @@
         </tr>
       </thead>
       <tbody>
+        <!-- I risultati verranno inseriti qui -->
         <tr>
-          <td>Multiple</td>
-          <td id="multiple-correct"></td>
-          <td id="multiple-incorrect"></td>
+          <td>Esito Test</td>
+          <td id="quantitàCorrette">0</td>
+          <td id="quantitàSbagliate">0</td>
         </tr>
-        <tr>
-          <td>Boolean</td>
-          <td id="boolean-correct"></td>
-          <td id="boolean-incorrect"></td>
-        </tr>
-        <!-- Aggiungi altre righe per ogni tipo di domanda se necessario -->
       </tbody>
     </table>
     <script src="provadeirisultatiarray.js"></script>
