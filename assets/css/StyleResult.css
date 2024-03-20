@@ -100,8 +100,16 @@ h6 .totSuTot {
   justify-content: center;
 }
 .container-list {
-  margin-block: 9em;
+  margin-block: 2em;
   background: black;
   display: inline-block;
   padding-block: 1em;
+}
+#list {
+  list-style-type: disc;
+  padding: 2em;
+  list-style-position: inside;
+}
+.answer {
+  margin-block: 1em;
 }

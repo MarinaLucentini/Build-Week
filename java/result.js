@@ -86,18 +86,35 @@ grafic();
 const list = () => {
   const listAnswer = document.getElementById("list");
   for (let i = 0; i < results.length; i++) {
-    const questions = document.createElement("ul");
-    listAnswer.appendChild(questions);
-    const selectedAnswer = document.createElement("li");
-    questions.appendChild(selectedAnswer);
-    questions.innerText = "Question" + " " + results[i].question;
-    selectedAnswer.innerText = `Selected answer ${results[i].selectedAnswer}`;
-    // "Selected answer" +
-    // " " +
-    // results[i].selectedAnswer +
-    // "Correct answer" +
-    // " " +
-    // results[i].correctAnswer;
+    const question = document.createElement("li");
+    listAnswer.appendChild(question);
+    question.classList.add("answer");
+
+    question.innerText = "Question" + " " + results[i].question;
+    const selectedAnswer = document.createElement("p");
+    question.appendChild(selectedAnswer);
+    selectedAnswer.innerText =
+      "Selected answer" + " " + results[i].selectedAnswer;
+    const correctAnswer = document.createElement("p");
+    question.appendChild(correctAnswer);
+    correctAnswer.innerText = "Correct answer" + " " + results[i].correctAnswer;
+    //   " " +
+    //   "Selected answer" +
+    //   " " +
+    //   results[i].selectedAnswer +
+    //   " " +
+    //   "Correct answer" +
+    //   " " +
+    //   results[i].correctAnswer;
+    // if (results[i].selectedAnswer === results[i].correctAnswer) {
+    //   const giusto = document.createElement("p");
+    //   answer.appendChild(giusto);
+    //   giusto.innerText = "Bravo!";
+    // } else {
+    //   const sbagliato = document.createElement("p");
+    //   answer.appendChild(sbagliato);
+    //   sbagliato.innerText = "Sbagliato!";
+    // }
   }
 };
 list();
