@@ -1,22 +1,39 @@
-const totalQuestions = 10
-const correctAnswers = 2.5
+// Recupera l'array results dai dati di sessione
+const results = JSON.parse(sessionStorage.getItem('results')) || [];
+console.log("log di come arriva array",results); // Per controllo
 
-const correctPercentage = (correctAnswers / totalQuestions) * 100
-const wrongPercentage = 100 - correctPercentage
 
-document.getElementById("correctPercentage").innerText = `${correctPercentage}%`
-document.getElementById("wrongPercentage").innerText = `${wrongPercentage}%`
+// Calcola risposte giuste e sbagliate
+let risposteGiuste = 0;
+let risposteSbagliate = 0;
 
-const circle = document.querySelector(".progress-circle")
-const circleAngle = (correctPercentage / 100) * 360
-circle.style.backgroundImage = `conic-gradient(#00ffff ${circleAngle}deg, #c2128d 0%)`
+results.forEach((result) => {
+  // Controlla se isCorrect è una stringa che rappresenta un booleano o un booleano diretto
+  const isCorrect = result.isCorrect === true || result.isCorrect === "true";
+  if (isCorrect) {
+    risposteGiuste += 1;
+  } else {
+    risposteSbagliate += 1;
+  }
+});
+console.log("log una volta eseguiti i calcoli",results)
 
-function redirectToNewPage() {
-  let newPageUrl = "feedback.html"
 
-  window.location.href = newPageUrl
-}
+// Calcolo totale delle domande
+const totaleDomande = results.length;
 
-document.getElementById("frase").style.color = "cyan"
+// Calcola le percentuali
+const percentualeCorrette = ((risposteGiuste / totaleDomande) * 100).toFixed(2);
+const percentualeSbagliate = ((risposteSbagliate / totaleDomande) * 100).toFixed(2);
 
-//dfvsfds
+
+
+document.getElementsByClassName('risultatiCorretti').innerHTML = "<h6><span>Correct</span><br/><span>${percentualeCorrette}%</span><br/><span>${risposteGiuste}/${totaleDomande} Questions</span> </h6>"
+document.getElementsByClassName('risultatiSbagliati').innerHTML = "<h6><span>Wrong</span><br/><span>${percentualeSbagliate}%</span><br/><span>${risposteSbagliate}/${totaleDomande} Questions</span> </h6>"
+
+
+// Determina il messaggio in base alla percentuale di risposte corrette
+const messaggioEsito = percentualeCorrette >= 60 ? "Complimenti, hai superato l'esame!" : "Mi dispiace, non hai superato il test.";
+
+// Aggiorna il documento HTML con il messaggio di esito
+document.getElementsByClassName('testoInternoGrafico').innerHTML = messaggioEsito 
