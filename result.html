@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Result page</title>
     <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/StyleResult.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,34 +20,35 @@
       </div>
     </header>
     <main>
-      <div class="result-text">
+      <div class="resultTitolo">
         <h1>Result</h1>
-        <br />
-        <h3>The summary of your answers:</h3>
+        <h2>The summary of your answers:</h2>
       </div>
-      <div class="container">
-        <div class="progress-circle">
-          <span>
-            Congratulations!
-            <p id="frase">You passed the exam.</p>
-            We'll send you the certificate in few minutes. check your email
-            (including promotions/ spam folder)
-          </span>
+      <div class="contenutoTuttoIlResult">
+        <div class="risultatiCorretti">
+          <h6>
+            <span class="correct"></span>
+            <span class="percentuale"></span>
+            <span class="totSuTot"></span>
+          </h6>
         </div>
-        <div class="correct">
-          Correct <br />
-          <span id="correctPercentage"></span>
+        <div class="testoInternoGrafico">
+          <h5>
+            We'll send you the certificate<br />in few minutes.<br />
+            check your email (including<br />promotions/ spam folder)
+          </h5>
         </div>
-        <div class="wrong">
-          Wrong<br />
-          <span id="wrongPercentage"></span>
+        <div class="risultatiSbagliati">
+          <h6>
+            <span class="correct"></span>
+            <span class="percentuale"></span>
+            <span class="totSuTot"></span>
+          </h6>
         </div>
       </div>
     </main>
-    <footer>
-      <div class="bottone">
-        <button onclick="redirectToNewPage()" class="button">RATE US</button>
-      </div>
+    <footer class="contenitoreRateUs">
+      <button class="bottoneRateUs">RATE US</button>
     </footer>
     <script src="/java/result.js"></script>
   </body>

@@ -169,6 +169,7 @@ function nextQuestion() {
     bottone.addEventListener("click", () => {
       let isCorrect = risposta === domanda.correct_answer;
       console.log(isCorrect ? "Risposta corretta!" : "Risposta sbagliata!");
+      //dove vengono push i dati inerenti alle risposte
       results.push({
         question: domanda.question,
         selectedAnswer: risposta,
@@ -188,7 +189,7 @@ function nextQuestion() {
         footer.appendChild(showResultButton);
         showResultButton.addEventListener("click", () => {
           console.log("Hai completato tutte le domande!");
-          window.location.href = "provadeirisultatiarray.html"; // Redirigi verso la pagina dei risultati
+          window.location.href = "result.html"; // Redirigi verso la pagina dei risultati
         });
         // Salva l'array results nei dati di sessione dopo che l'utente ha completato il quiz
         sessionStorage.setItem('results', JSON.stringify(results));
@@ -203,4 +204,4 @@ function nextQuestion() {
 // Chiama la funzione startTimer per avviare il quiz
 startTimer();
 nextQuestion();
-console.log("dcscfd", results)
+console.log("Array da riempire", results)
