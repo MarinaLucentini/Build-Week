@@ -85,3 +85,12 @@ header div img {
   font-size: 1.2rem;
   cursor: pointer;
 }
+#feedback-message {
+  color: white;
+  text-align: center;
+  font-size: 1.7rem;
+  margin-top: 2em;
+  width: 700px;
+  margin-inline: auto;
+  line-height: 1.2em;
+}
