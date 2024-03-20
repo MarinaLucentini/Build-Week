@@ -9,3 +9,6 @@ stars.forEach((star, index1) => {
     })
   })
 })
+infoButton.addEventListener("click", () => {
+  window.location.href = "https://epicode.com/"
+})
