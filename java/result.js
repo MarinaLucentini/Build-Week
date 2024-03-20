@@ -88,16 +88,29 @@ const list = () => {
   for (let i = 0; i < results.length; i++) {
     const question = document.createElement("li");
     listAnswer.appendChild(question);
-    question.classList.add("answer");
 
     question.innerText = "Question" + " " + results[i].question;
-    const selectedAnswer = document.createElement("p");
-    question.appendChild(selectedAnswer);
-    selectedAnswer.innerText =
-      "Selected answer" + " " + results[i].selectedAnswer;
     const correctAnswer = document.createElement("p");
     question.appendChild(correctAnswer);
-    correctAnswer.innerText = "Correct answer" + " " + results[i].correctAnswer;
+    correctAnswer.innerText =
+      "Correct answer is:" + " " + results[i].correctAnswer + " ";
+
+    if (results[i].correctAnswer === results[i].selectedAnswer) {
+      const checked = document.createElement("img");
+      correctAnswer.appendChild(checked);
+      checked.src =
+        "https://th.bing.com/th/id/R.b8c2a80b495234d91c635a32ef0f0099?rik=5TxvifYPiX%2fyYg&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2fRcd%2fRpo%2fRcdRpoLoi.png&ehk=f3CulHw8q4hRI18oWolrpyk21R9S%2fTMxC8AEqvOU35U%3d&risl=&pid=ImgRaw&r=0";
+      checked.style = "width:10px";
+    } else {
+      const wrong = document.createElement("img");
+      correctAnswer.appendChild(wrong);
+      wrong.src =
+        "https://th.bing.com/th/id/R.e88bb40ecefdbd2d2f9a02944e23e687?rik=egJSj%2bSgNwIo%2bw&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2f9cR%2fLbg%2f9cRLbgE7i.png&ehk=um2l3QR5q%2bY4Ii8W05U1Ly%2f%2bmY5QrVU8ZFS1fmzOXlc%3d&risl=&pid=ImgRaw&r=0";
+      wrong.style = "width:10px";
+    }
+    // const correctAnswer = document.createElement("p");
+    // question.appendChild(correctAnswer);
+    // correctAnswer.innerText = "Correct answer" + " " + results[i].correctAnswer;
     //   " " +
     //   "Selected answer" +
     //   " " +
