@@ -116,7 +116,7 @@ rimanenti.innerText = "REMAINING";
 // Funzione per avviare il timer
 function startTimer() {
   clearInterval(timer);
-  counter = 50;
+  counter = 50; // Imposta qui il tuo intervallo di tempo desiderato
   progress = 0;
   timer = setInterval(() => {
     counter--;
@@ -128,16 +128,24 @@ function startTimer() {
     if (counter === 0) {
       clearInterval(timer);
       console.log("Tempo scaduto!");
-      index++;
-      if (index < questions.length) {
+      results.push({
+        question: questions[index].question,
+        selectedAnswer: false, // Indica che il tempo è scaduto e non è stata selezionata nessuna risposta
+        correctAnswer: questions[index].correct_answer,
+        isCorrect: false
+      });
+      if (index < questions.length - 1) {
+        index++;
         nextQuestion();
-        startTimer();
       } else {
         console.log("Hai completato tutte le domande!");
+        // Gestisci la fine del quiz qui
+        // Mostra risultati o qualsiasi altra logica di conclusione
       }
     }
-  }, 1000);
+  }, 50);
 }
+
 
 // Variabile per tenere traccia dell'indice della domanda corrente
 let index = 0;
@@ -150,8 +158,8 @@ function nextQuestion() {
   risposteElement.innerHTML = "";
   // Controlla se siamo all'ultima domanda
   if (index === questions.length - 1) {
-    // Se siamo all'ultima domanda, ferma il timer
-    clearInterval(timer);
+
+
   } else {
     // Se non siamo all'ultima domanda, avvia il timer per la prossima domanda
     startTimer();
@@ -178,7 +186,7 @@ function nextQuestion() {
       });
       index++;
       // Controlla se siamo all'ultima domanda
-      if (index === questions.length) {
+      if (index === questions.length) { 
         // Se siamo all'ultima domanda, aggiungi il pulsante per mostrare i risultati
         const footer = document.querySelector('footer');
         const showResultButton = document.createElement("button");

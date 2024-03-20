@@ -62,12 +62,6 @@ document.getElementsByClassName(
 // )[0].innerHTML = `<h3>${messaggioEsito}</h3></br><h4>${messaggioEsito2}</h4><h5>We'll send you the certificate<br />in few minutes.<br />
 // check your email (including<br />promotions/ spam folder)</h5>`;
 
-//reazione al click che ti porta alla pagina feedback
-const button = document.querySelector(".bottoneRateUs");
-button.addEventListener("click", function () {
-  window.location.href = "feedback.html";
-  sessionStorage.setItem("refreshIndexPage", "true");
-});
 const grafic = () => {
   const passedOrNot = document.getElementById("passed");
   const passedOrNot2 = document.getElementById("passed2");
@@ -92,12 +86,18 @@ const list = () => {
     questions.appendChild(selectedAnswer);
     questions.innerText = "Question" + " " + results[i].question;
     selectedAnswer.innerText = `Selected answer ${results[i].selectedAnswer}`;
-    // "Selected answer" +
-    // " " +
-    // results[i].selectedAnswer +
-    // "Correct answer" +
-    // " " +
-    // results[i].correctAnswer;
+    "Selected answer" +
+    " " +
+    results[i].selectedAnswer +
+    "Correct answer" +
+    " " +
+    results[i].correctAnswer;
   }
 };
+//reazione al click che ti porta alla pagina feedback
+const button = document.querySelector(".bottoneRateUs");
+button.addEventListener("click", function () {
+  window.location.href = "feedback.html";
+  sessionStorage.setItem("refreshIndexPage", "true");
+});
 list();
