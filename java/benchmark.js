@@ -1,9 +1,10 @@
 // Recupera l'array results dai dati di sessione
 const questions = JSON.parse(sessionStorage.getItem("questions")) || [];
+// il console log sottostante viene fatto per accertarci che arriva integro
 console.log("log di come arriva array per controllo", questions); // Per controllo
 
 
-// Array per salvare l'esito di ogni risposta
+// Array (per il momento vuoto) per salvare l'esito di ogni risposta data dall'utente
 const results = []
 
 // Codice per il timer
@@ -121,4 +122,6 @@ function nextQuestion() {
 // Chiama la funzione startTimer per avviare il quiz
 startTimer()
 nextQuestion()
-console.log("Array da riempire", results)
+console.log("NON APRIRE ARRAY SOTTOSTANTE PRIMA DI COMPLETARE LE DOMANDE PENA BUG VISIVO NEI LOG")
+console.log("NON INFLUENZA LA LOGICA")
+console.log("Array che viene riempito ogni volta che utente compila le domande", results)
