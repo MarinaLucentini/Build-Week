@@ -168,6 +168,7 @@ function nextQuestion() {
     risposteElement.appendChild(bottone)
     bottone.addEventListener("click", () => {
       let isCorrect = risposta === domanda.correct_answer
+      //modifica background colore bottone in base alla risposta
       if (isCorrect) {
         bottone.classList.add("green")
       } else {
