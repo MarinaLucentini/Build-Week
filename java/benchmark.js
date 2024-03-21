@@ -41,13 +41,20 @@ function startTimer() {
       console.log("Tempo scaduto!")
       index++
       if (index < questions.length) {
+        const domanda = questions[index]
+          results.push({
+            question: domanda.question,
+            selectedAnswer: "Time Out",
+            correctAnswer: domanda.correct_answer,
+            isCorrect: false,
+          })
         nextQuestion()
         startTimer()
       } else {
         console.log("Hai completato tutte le domande!")
       }
     }
-  }, 100000)
+  }, 50)
 }
 
 // Variabile per tenere traccia dell'indice della domanda corrente
