@@ -13,6 +13,7 @@ const finish = () => {
   rimuoviTitoloDomanda.classList.add("stilePerUtimaDomanda")
   rimuoviBottoniRisposta.classList.add("stilePerUtimaDomanda")
   centraBottoneAlCentro.classList.add("stilePerUtimaDomandaBottone")
+  clearInterval(timer)
 }
 
 // Array (per il momento vuoto) per salvare l'esito di ogni risposta data dall'utente
@@ -86,7 +87,7 @@ function startTimer() {
         sessionStorage.setItem("results", JSON.stringify(results))
         finish()
         console.log("Hai completato tutte le domande! è il timer è scaduto")
-
+        
       }
     }
   }, 50)
@@ -104,7 +105,8 @@ function nextQuestion() {
   // Controlla se siamo all'ultima domanda
   if (index === questions.length -1) {
     // Se siamo all'ultima domanda, ferma il timer
-    clearInterval(timer)
+    startTimer()
+    
   } else {
     // Se non siamo all'ultima domanda, avvia il timer per la prossima domanda
     startTimer()
