@@ -3,13 +3,24 @@ const questions = JSON.parse(sessionStorage.getItem("questions")) || [];
 // il console log sottostante viene fatto per accertarci che arriva integro
 console.log("log di come arriva array per controllo", questions); // Per controllo
 
+// parte finale grafica dopo conclucsione test
+const finish = () => {
+  const rimuoviTimer = document.getElementsByClassName("containerTimer")[0] ;
+  const rimuoviTitoloDomanda = document.getElementsByClassName("Question")[0];
+  const rimuoviBottoniRisposta = document.getElementsByClassName("contenitoreRisposte")[0] ;
+  const centraBottoneAlCentro = document.getElementById("show-result-button") ;
+  rimuoviTimer.classList.add("stilePerUtimaDomanda")
+  rimuoviTitoloDomanda.classList.add("stilePerUtimaDomanda")
+  rimuoviBottoniRisposta.classList.add("stilePerUtimaDomanda")
+  centraBottoneAlCentro.classList.add("stilePerUtimaDomandaBottone")
+}
 
 // Array (per il momento vuoto) per salvare l'esito di ogni risposta data dall'utente
 const results = []
 
 // Codice per il timer
-let counter = 60
-let progress = -19
+let counter = 50
+let progress = 0
 let timer
 
 // Definizione dell'elemento h4 e inizializzazione del timer
@@ -38,20 +49,44 @@ function startTimer() {
 
     if (counter === 0) {
       clearInterval(timer)
-      console.log("Tempo scaduto!")
       index++
       if (index < questions.length) {
         const domanda = questions[index]
-          results.push({
-            question: domanda.question,
-            selectedAnswer: "Time Out",
-            correctAnswer: domanda.correct_answer,
-            isCorrect: false,
-          })
+        results.push({
+          question: domanda.question,
+          selectedAnswer: "Time Out",
+          correctAnswer: domanda.correct_answer,
+          isCorrect: false,
+        })
+        console.log("Tempo scaduto!")
         nextQuestion()
         startTimer()
+
       } else {
-        console.log("Hai completato tutte le domande!")
+        console.log("Tempo scaduto ultima domanda!")
+        results.push({
+          question: "tempo scaduto",
+          selectedAnswer: "Time Out",
+          correctAnswer: "non hai risposto",
+          isCorrect: false,
+          
+        })
+        // Se siamo all'ultima domanda, aggiungi il pulsante per mostrare i risultati
+        const footer = document.querySelector("footer")
+        const showResultButton = document.createElement("button")
+        showResultButton.textContent = "MOSTRA RISULTATO TEST"
+        showResultButton.id = "show-result-button"
+        showResultButton.classList.add("button-ans")
+        footer.innerHTML = "" // Rimuovi eventuali vecchi pulsanti nel footer
+        footer.appendChild(showResultButton)
+        showResultButton.addEventListener("click", () => {
+          window.location.href = "result.html" // Redirigi verso la pagina dei risultati
+        })
+        // Salva l'array results nei dati di sessione dopo che l'utente ha completato il quiz
+        sessionStorage.setItem("results", JSON.stringify(results))
+        finish()
+        console.log("Hai completato tutte le domande! è il timer è scaduto")
+
       }
     }
   }, 50)
@@ -67,7 +102,7 @@ function nextQuestion() {
   const risposteElement = document.querySelector(".contenitoreRisposte")
   risposteElement.innerHTML = ""
   // Controlla se siamo all'ultima domanda
-  if (index === questions.length - 1) {
+  if (index === questions.length -1) {
     // Se siamo all'ultima domanda, ferma il timer
     clearInterval(timer)
   } else {
@@ -76,7 +111,7 @@ function nextQuestion() {
   }
   const domanda = questions[index]
   questionElement.innerHTML = `<h1>${domanda.question}</h1>`
-  contatoreElement.textContent = `${index + 1}`
+  contatoreElement.innerHTML = `<span>${index + 1}<span class="coloreContatore"> / ${questions.length}</span></span>`
   const tutteLeRisposte = [...domanda.incorrect_answers, domanda.correct_answer]
   tutteLeRisposte.sort(() => Math.random() - 0.5)
   tutteLeRisposte.forEach((risposta, rispostaIndex) => {
@@ -113,22 +148,25 @@ function nextQuestion() {
         footer.innerHTML = "" // Rimuovi eventuali vecchi pulsanti nel footer
         footer.appendChild(showResultButton)
         showResultButton.addEventListener("click", () => {
-          console.log("Hai completato tutte le domande!")
+          console.log("Hai completato tutte le domande! e l'ultima l'hai selezionata brova")
           window.location.href = "result.html" // Redirigi verso la pagina dei risultati
         })
         // Salva l'array results nei dati di sessione dopo che l'utente ha completato il quiz
+        finish()
         sessionStorage.setItem("results", JSON.stringify(results))
       } else {
         // Se non siamo all'ultima domanda, mostra la prossima domanda
-        setTimeout(nextQuestion, 1000)
+        setTimeout(nextQuestion, 450)
       }
     })
   })
 }
 
 // Chiama la funzione startTimer per avviare il quiz
-startTimer()
 nextQuestion()
+startTimer()
 console.log("NON APRIRE ARRAY SOTTOSTANTE PRIMA DI COMPLETARE LE DOMANDE PENA BUG VISIVO NEI LOG")
 console.log("NON INFLUENZA LA LOGICA")
 console.log("Array che viene riempito ogni volta che utente compila le domande", results)
+
+

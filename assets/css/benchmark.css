@@ -1,6 +1,7 @@
 /* inizio modifiche  */
 main {
   text-align: center;
+  margin-block: -8em;
 }
 .contatoreQuestion {
   font-size: 40px;
@@ -14,18 +15,21 @@ main {
   color: #d20094;
 }
 .Question h1 {
-  font-size: 80px;
+  font-size: 63px;
 }
 .contenitoreRisposte {
-  margin: 100px 240px 35px;
+  margin: 60px 140px 35px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .contenitoreRisposte button {
   /* background: linear-gradient(to right, #3a0a4b, #59226d); */
   background-color: #3a0a4b;
   box-shadow: 0px -4px 5px 0px white;
   border: none;
-  height: 100px;
-  width: 400px;
+  height: 125px;
+  width: 561px;
   margin: 20px 50px;
   border-radius: 150px;
   font-size: 26px;
@@ -91,4 +95,11 @@ footer button {
 }
 .red {
   background: linear-gradient(to right, #f32525, #570101);
+}
+
+.stilePerUtimaDomanda {
+  display: none;
+}
+.stilePerUtimaDomandaBottone {
+  margin-top: 390px;
 }
