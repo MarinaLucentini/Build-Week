@@ -84,6 +84,7 @@ footer button {
   font-weight: bold;
   box-shadow: 0 0 60px #0ae3eb;
   border: 0;
+  cursor: pointer;
 }
 .green {
   background: linear-gradient(to right, #2c990b, #033712);
