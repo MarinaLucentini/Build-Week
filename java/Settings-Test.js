@@ -1,4 +1,4 @@
-const questions = [
+const domande90Mix = [
   // inzio easy -------------------------------------------------------------------------------------------------------------------
 {
   type: "multiple",
@@ -853,7 +853,7 @@ const questions = [
 //   fine hard -------------------------------------------------------------------------------------------------------------------
 ]
 //fine array --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+console.log("array di partenza nome: domande90Mix ",domande90Mix);
 
 
 // funzione nella schermata settings test condiziona i bottoni per avviare lo start
@@ -879,83 +879,47 @@ function selectButton(button) {
     }
   });
 }
+// fine logica bottoni 
 
-// function startTest() {
-//   // Codice per avviare il test quando il pulsante "Start" è cliccato
-//   alert("Il test è pronto, clicca ok per continuare ed avviare il test.");
-// }
 
-// document.addEventListener('DOMContentLoaded', function() {
-//   const startButton = document.querySelector('.startbutton');
-//   startButton.addEventListener('click', function() {
-//     window.location.href = 'benchmark.html';
-//   });
-// });
-
-//prove funzione filtro in base a bottoni 2
-
+//inizio filtraggio array in base alle condizioni (bottoni selezionati)
 function startTest() {
-  // Ottenere il testo del pulsante selezionato
-  const selectedButton = document.querySelector('.bottoni2 button.selected');
-  const selectedButtonText = selectedButton.textContent.trim();
+  // Recupera i valori selezionati per quantità e difficoltà
+  const selectedQuantity = document.querySelector(".bottoni1 button.selected").textContent;
+  const selectedDifficulty = document.querySelector(".bottoni2 button.selected").textContent.toLowerCase().trim();
 
-  // Filtrare l'array 'questions' in base al testo del pulsante selezionato
-  const filteredQuestions = questions.filter(question => {
-    return question.difficulty === selectedButtonText;
-  });
+  let questions = [];
 
-  // Creare un nuovo array per contenere le domande filtrate
-  const filteredQuestionsArray = [];
+  if (selectedDifficulty === 'mix') {
+    // Divide equamente la selezione tra le categorie di difficoltà disponibili
+    const difficultyTypes = ['easy', 'medium', 'hard'];
+    const domande90MixPerType = Math.floor(selectedQuantity / difficultyTypes.length);
+    
+    difficultyTypes.forEach(difficulty => {
+      const domande90MixOfDifficulty = domande90Mix.filter(question => question.difficulty === difficulty);
+      const randomSelection = selectRandomQuestions(domande90MixOfDifficulty, domande90MixPerType);
+      questions = questions.concat(randomSelection);
+    });
 
-  // Push delle domande filtrate nell'array appena creato
-  filteredQuestions.forEach(question => {
-    filteredQuestionsArray.push(question);
-  });
+    // Se non si divide esattamente, aggiungi random per raggiungere la quantità desiderata
+    while (questions.length < selectedQuantity) {
+      const randomQuestion = domande90Mix[Math.floor(Math.random() * domande90Mix.length)];
+      if (!questions.includes(randomQuestion)) {
+        questions.push(randomQuestion);
+      }
+    }
+  } else {
+    // Filtra le domande per la difficoltà selezionata
+    const domande90MixOfDifficulty = domande90Mix.filter(question => question.difficulty === selectedDifficulty);
+    questions = selectRandomQuestions(domande90MixOfDifficulty, selectedQuantity);
+  }
 
-  // Ora puoi fare qualsiasi cosa con l'array di domande filtrate
-  console.log(filteredQuestionsArray);
-  // Esegui altre operazioni qui, come avviare il test con le domande filtrate
+  console.log("array nuovo filtrato con nome: questions ",questions); // Qui puoi manipolare l'array come necessario
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function selectRandomQuestions(domande90MixArray, quantity) {
+  const shuffled = domande90MixArray.sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, quantity);
+}
 
 
