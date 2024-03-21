@@ -2,7 +2,6 @@
 body {
   background-image: url("../img/bg.jpg");
   background-size: cover;
-
   background-repeat: no-repeat;
   color: white;
   font-family: "Inter", sans-serif;
@@ -52,9 +51,7 @@ header div img {
 .contenutoTuttoIlResult .risultatiSbagliati {
   margin-left: 100px;
 }
-.totSuTot {
-  margin: 2em;
-}
+
 .testoInternoGrafico {
   display: inline-block;
   height: 137px;
@@ -89,7 +86,7 @@ h4 {
   opacity: 0.5;
 }
 h6 {
-  width: 180px;
+  width: 284px;
 }
 .risultatiCorretti {
   position: relative;
@@ -107,12 +104,12 @@ h6 {
   line-height: 1em;
 }
 h6 .correct {
-  font-size: 70px;
+  font-size: 65px;
   line-height: 50px;
 }
 h6 .percentuale {
-  font-size: 80px;
-  line-height: 95px;
+  font-size: 50px;
+  line-height: 80px;
   font-family: "Outfit", sans-serif;
   font-weight: bold;
 }
