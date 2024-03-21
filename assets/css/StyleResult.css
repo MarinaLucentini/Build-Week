@@ -13,6 +13,7 @@ body {
 }
 .resultTitolo h1 {
   font-size: 100px;
+  font-weight: 600;
 }
 .resultTitolo h2 {
   font-size: 40px;
@@ -21,19 +22,21 @@ body {
 .contenutoTuttoIlResult {
   margin-top: 70px;
   display: inline-flex;
-  align-items: center;
+  margin-right: 100px;
 }
 .contenutoTuttoIlResult .risultatiCorretti {
   margin-right: 180px;
 }
 .contenutoTuttoIlResult .risultatiSbagliati {
-  margin-left: 180px;
+  margin-left: 100px;
+}
+.totSuTot {
+  margin: 2em;
 }
 .testoInternoGrafico {
   display: inline-block;
   height: 137px;
   position: relative;
-
   top: 79px;
   left: 19px;
 }
@@ -63,7 +66,7 @@ h4 {
   border: 3px solid white;
 }
 h6 {
-  width: 150px;
+  width: 180px;
 }
 .risultatiCorretti {
   position: relative;
@@ -80,17 +83,17 @@ h6 {
   text-align: right;
 }
 h6 .correct {
-  font-size: 50px;
+  font-size: 70px;
   line-height: 50px;
 }
 h6 .percentuale {
-  font-size: 37px;
-  line-height: 50px;
+  font-size: 80px;
+  line-height: 80px;
   font-family: "Outfit", sans-serif;
   font-weight: bold;
 }
 h6 .totSuTot {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 20px;
   font-family: "Inter", sans-serif;
   text-transform: lowercase;
