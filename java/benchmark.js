@@ -178,7 +178,7 @@ function startTimer() {
         console.log("Hai completato tutte le domande! è il timer è scaduto");
       }
     }
-  }, 50);
+  }, 1000);
 }
 
 // Variabile per tenere traccia dell'indice della domanda corrente
