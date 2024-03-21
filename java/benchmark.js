@@ -149,7 +149,7 @@ function nextQuestion() {
   const risposteElement = document.querySelector(".contenitoreRisposte")
   risposteElement.innerHTML = ""
   // Controlla se siamo all'ultima domanda
-  if (index === questions.length - 1) {
+  if (index === questions.length) {
     // Se siamo all'ultima domanda, ferma il timer
     clearInterval(timer)
   } else {
