@@ -80,7 +80,7 @@ header div img {
   height: 60px;
   background-color: #00ffff;
   border: none;
-  font-weight: 700;
+  font-weight: 900;
   box-shadow: 1px 0px 15px 4px#0ae3eb;
   font-size: 1.2rem;
   cursor: pointer;
@@ -93,6 +93,9 @@ header div img {
   width: 700px;
   margin-inline: auto;
   line-height: 1.2em;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
 }
 
 #moreInfoButton {
@@ -100,11 +103,11 @@ header div img {
   height: 60px;
   background-color: #00ffff;
   border: none;
-  font-weight: 700;
+  font-weight: 900;
   box-shadow: 1px 0px 15px 4px #0ae3eb;
   font-size: 1.2rem;
   cursor: pointer;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #imageContainer {

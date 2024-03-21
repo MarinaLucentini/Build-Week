@@ -45,15 +45,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (selectedStars.length >= 6) {
       // Mostra il messaggio di ringraziamento
-      feedbackMessage.innerText = 'Thanks for your feedback'
+      feedbackMessage.innerText = 'Thanks for your feedback!'
       imageContainer.innerHTML = `
         <div id="gifContainer" style="display: flex; justify-content: center; align-items: center;">
           <img src="https://media1.tenor.com/m/6vWYnc0dkisAAAAd/your-feedback-is-appreciated-we-value-your-feedback.gif" alt="Love GIF" style="max-width: 100%;">
         </div>`
     } else {
       // Mostra il messaggio di scuse
-      feedbackMessage.innerText =
-        'Sorry, please let us know how we can improve.'
+      feedbackMessage.innerText = "We're sorry to hear your feedback."
       imageContainer.innerHTML = `
         <div id="gifContainer" style="display: flex; justify-content: center; align-items: center;">
           <img src="https://media1.tenor.com/m/9rRu1_qcVpIAAAAC/shredder-mr-burns.gif" alt="Sad GIF" style="max-width: 100%;">
@@ -63,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
     moreInfoButton.style.display = 'block'
     moreInfoButton.style.margin = '0 auto'
     moreInfoButton.style.marginBottom = '20px'
+    moreInfoButton.style.marginTop = '50px'
 
     imageContainer.appendChild(moreInfoButton)
   }
