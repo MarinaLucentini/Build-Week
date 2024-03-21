@@ -52,7 +52,7 @@ main {
   border-radius: 50%;
   width: 10rem;
   height: 10rem;
-  mask-image: radial-gradient(circle at center, transparent 50px, white 51px);
+  mask-image: radial-gradient(circle at center, transparent 60px, white 61px);
 }
 .containerTimer {
   margin-left: 90%;
