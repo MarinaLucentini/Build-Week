@@ -885,7 +885,7 @@ function selectButton(button) {
 //inizio filtraggio array in base alle condizioni (bottoni selezionati)
 function startTest() {
   // Recupera i valori selezionati per quantità e difficoltà
-  const selectedQuantity = document.querySelector(".bottoni1 button.selected").textContent;
+  const selectedQuantity = parseInt(document.querySelector(".bottoni1 button.selected").textContent);
   const selectedDifficulty = document.querySelector(".bottoni2 button.selected").textContent.toLowerCase().trim();
 
   let questions = [];
@@ -893,33 +893,39 @@ function startTest() {
   if (selectedDifficulty === 'mix') {
     // Divide equamente la selezione tra le categorie di difficoltà disponibili
     const difficultyTypes = ['easy', 'medium', 'hard'];
-    const domande90MixPerType = Math.floor(selectedQuantity / difficultyTypes.length);
+    const questionsPerType = Math.floor(selectedQuantity / difficultyTypes.length);
     
     difficultyTypes.forEach(difficulty => {
-      const domande90MixOfDifficulty = domande90Mix.filter(question => question.difficulty === difficulty);
-      const randomSelection = selectRandomQuestions(domande90MixOfDifficulty, domande90MixPerType);
+      const filteredQuestions = domande90Mix.filter(question => question.difficulty === difficulty);
+      const randomSelection = selectRandomQuestions(filteredQuestions, questionsPerType);
       questions = questions.concat(randomSelection);
     });
 
     // Se non si divide esattamente, aggiungi random per raggiungere la quantità desiderata
     while (questions.length < selectedQuantity) {
-      const randomQuestion = domande90Mix[Math.floor(Math.random() * domande90Mix.length)];
+      const randomIndex = Math.floor(Math.random() * domande90Mix.length);
+      const randomQuestion = domande90Mix[randomIndex];
       if (!questions.includes(randomQuestion)) {
         questions.push(randomQuestion);
       }
     }
   } else {
     // Filtra le domande per la difficoltà selezionata
-    const domande90MixOfDifficulty = domande90Mix.filter(question => question.difficulty === selectedDifficulty);
-    questions = selectRandomQuestions(domande90MixOfDifficulty, selectedQuantity);
+    const filteredQuestions = domande90Mix.filter(question => question.difficulty === selectedDifficulty);
+    questions = selectRandomQuestions(filteredQuestions, selectedQuantity);
   }
 
-  console.log("array nuovo filtrato con nome: questions ",questions); // Qui puoi manipolare l'array come necessario
+  console.log("array nuovo filtrato con nome: questions ",questions); 
+
+  // Salva l'array questions nel localStorage
+  sessionStorage.setItem("questions", JSON.stringify(questions));
+
+  // Reindirizza l'utente alla pagina benchmark.html
+  window.location.href = "benchmark.html";
 }
 
-function selectRandomQuestions(domande90MixArray, quantity) {
-  const shuffled = domande90MixArray.sort(() => 0.5 - Math.random());
+function selectRandomQuestions(questionsArray, quantity) {
+  const shuffled = questionsArray.sort(() => 0.5 - Math.random());
   return shuffled.slice(0, quantity);
 }
-
 

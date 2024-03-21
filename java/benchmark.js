@@ -1,97 +1,7 @@
-// Array delle domande
-const questions = [
-  {
-    type: "multiple",
-    difficulty: "easy",
-    category: "Science: Computers",
-    question: "How long is an IPv6 address?",
-    correct_answer: "128 bits",
-    incorrect_answers: ["32 bits", "64 bits", "128 bytes"],
-  },
-  {
-    type: "boolean",
-    difficulty: "easy",
-    category: "Science: Computers",
-    question: "The logo for Snapchat is a Bell.",
-    correct_answer: "False",
-    incorrect_answers: ["True"],
-  },
-  {
-    type: "multiple",
-    difficulty: "easy",
-    category: "Science: Computers",
-    question:
-      "The numbering system with a radix of 16 is more commonly referred to as ",
-    correct_answer: "Hexidecimal",
-    incorrect_answers: ["Binary", "Duodecimal", "Octal"],
-  },
-  {
-    type: "multiple",
-    difficulty: "easy",
-    category: "Science: Computers",
-    question:
-      "Which programming language shares its name with an island in Indonesia?",
-    correct_answer: "Java",
-    incorrect_answers: ["Python", "C", "Jakarta"],
-  },
-  {
-    type: "boolean",
-    difficulty: "easy",
-    category: "Science: Computers",
-    question:
-      "In most programming languages, the operator ++ is equivalent to the statement &quot;+= 1&quot;.",
-    correct_answer: "True",
-    incorrect_answers: ["False"],
-  },
-  {
-    type: "multiple",
-    difficulty: "easy",
-    category: "Science: Computers",
-    question:
-      "The programming language &#039;Swift&#039; was created to replace what other programming language?",
-    correct_answer: "Objective-C",
-    incorrect_answers: ["C#", "Ruby", "C++"],
-  },
-  {
-    type: "boolean",
-    difficulty: "easy",
-    category: "Science: Computers",
-    question:
-      "The NVidia GTX 1080 gets its name because it can only render at a 1920x1080 screen resolution.",
-    correct_answer: "False",
-    incorrect_answers: ["True"],
-  },
-  {
-    type: "multiple",
-    difficulty: "easy",
-    category: "Science: Computers",
-    question: "What does CPU stand for?",
-    correct_answer: "Central Processing Unit",
-    incorrect_answers: [
-      "Central Process Unit",
-      "Computer Personal Unit",
-      "Central Processor Unit",
-    ],
-  },
-  {
-    type: "boolean",
-    difficulty: "easy",
-    category: "Science: Computers",
-    question: "Ada Lovelace is often considered the first computer programmer.",
-    correct_answer: "True",
-    incorrect_answers: ["False"],
-  },
-  {
-    type: "multiple",
-    difficulty: "easy",
-    category: "Science: Computers",
-    question:
-      "According to the International System of Units, how many bytes are in a kilobyte of RAM?",
-    correct_answer: "1000",
-    incorrect_answers: ["512", "1024", "500"],
-  },
-  // Altre domande...
-]
+// Recupera l'array results dai dati di sessione
+const questions = JSON.parse(sessionStorage.getItem("questions")) || [];
+console.log("log di come arriva array per controllo", questions); // Per controllo
+
 
 // Array per salvare l'esito di ogni risposta
 const results = []
@@ -136,7 +46,7 @@ function startTimer() {
         console.log("Hai completato tutte le domande!")
       }
     }
-  }, 1000)
+  }, 100000)
 }
 
 // Variabile per tenere traccia dell'indice della domanda corrente
