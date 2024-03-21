@@ -170,5 +170,3 @@ startTimer()
 console.log("NON APRIRE ARRAY SOTTOSTANTE PRIMA DI COMPLETARE LE DOMANDE PENA BUG VISIVO NEI LOG")
 console.log("NON INFLUENZA LA LOGICA")
 console.log("Array che viene riempito ogni volta che utente compila le domande", results)
-
-
