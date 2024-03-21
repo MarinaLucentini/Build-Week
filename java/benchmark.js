@@ -93,6 +93,20 @@ const questions = [
   // Altre domande...
 ];
 
+const finish = () => {
+  const rimuoviTimer = document.getElementsByClassName("containerTimer")[0];
+  const rimuoviTitoloDomanda = document.getElementsByClassName("Question")[0];
+  const rimuoviBottoniRisposta = document.getElementsByClassName(
+    "contenitoreRisposte"
+  )[0];
+  const centraBottoneAlCentro = document.getElementById("show-result-button");
+  rimuoviTimer.classList.add("stilePerUtimaDomanda");
+  rimuoviTitoloDomanda.classList.add("stilePerUtimaDomanda");
+  rimuoviBottoniRisposta.classList.add("stilePerUtimaDomanda");
+  centraBottoneAlCentro.classList.add("stilePerUtimaDomandaBottone");
+  clearInterval(timer);
+};
+
 // Array per salvare l'esito di ogni risposta
 const results = [];
 
@@ -127,16 +141,44 @@ function startTimer() {
 
     if (counter === 0) {
       clearInterval(timer);
-      console.log("Tempo scaduto!");
       index++;
       if (index < questions.length) {
+        const domanda = questions[index];
+        results.push({
+          question: domanda.question,
+          selectedAnswer: "Time Out",
+          correctAnswer: domanda.correct_answer,
+          isCorrect: false,
+        });
+        console.log("Tempo scaduto!");
         nextQuestion();
         startTimer();
       } else {
-        console.log("Hai completato tutte le domande!");
+        console.log("Tempo scaduto ultima domanda!");
+        results.push({
+          question: "tempo scaduto",
+          selectedAnswer: "Time Out",
+          correctAnswer: "non hai risposto",
+          isCorrect: false,
+        });
+        // Se siamo all'ultima domanda, aggiungi il pulsante per mostrare i risultati
+        const footer = document.querySelector("footer");
+        const showResultButton = document.createElement("button");
+        showResultButton.textContent = "MOSTRA RISULTATO TEST";
+        showResultButton.id = "show-result-button";
+        showResultButton.classList.add("button-ans");
+        footer.innerHTML = ""; // Rimuovi eventuali vecchi pulsanti nel footer
+        footer.appendChild(showResultButton);
+        showResultButton.addEventListener("click", () => {
+          window.location.href = "result.html"; // Redirigi verso la pagina dei risultati
+        });
+        // Salva l'array results nei dati di sessione dopo che l'utente ha completato il quiz
+        sessionStorage.setItem("results", JSON.stringify(results));
+        finish();
+        console.log("Hai completato tutte le domande! è il timer è scaduto");
       }
     }
-  }, 1000);
+  }, 50);
 }
 
 // Variabile per tenere traccia dell'indice della domanda corrente
@@ -149,9 +191,9 @@ function nextQuestion() {
   const risposteElement = document.querySelector(".contenitoreRisposte");
   risposteElement.innerHTML = "";
   // Controlla se siamo all'ultima domanda
-  if (index === questions.length) {
+  if (index === questions.length - 1) {
     // Se siamo all'ultima domanda, ferma il timer
-    clearInterval(timer);
+    startTimer();
   } else {
     // Se non siamo all'ultima domanda, avvia il timer per la prossima domanda
     startTimer();
@@ -202,16 +244,20 @@ function nextQuestion() {
           window.location.href = "result.html"; // Redirigi verso la pagina dei risultati
         });
         // Salva l'array results nei dati di sessione dopo che l'utente ha completato il quiz
+        finish();
         sessionStorage.setItem("results", JSON.stringify(results));
       } else {
         // Se non siamo all'ultima domanda, mostra la prossima domanda
-        setTimeout(nextQuestion, 100);
+        setTimeout(nextQuestion, 80);
       }
     });
   });
 }
 
 // Chiama la funzione startTimer per avviare il quiz
-startTimer();
 nextQuestion();
-console.log("Array da riempire", results);
+startTimer();
+console.log(
+  "Array che viene riepito ogni volta che l'utente compila le domande",
+  results
+);
