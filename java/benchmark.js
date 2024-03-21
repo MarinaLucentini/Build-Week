@@ -201,7 +201,7 @@ function nextQuestion() {
         sessionStorage.setItem("results", JSON.stringify(results))
       } else {
         // Se non siamo all'ultima domanda, mostra la prossima domanda
-        setTimeout(nextQuestion, 2000)
+        setTimeout(nextQuestion, 1000)
       }
     })
   })
