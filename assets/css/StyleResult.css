@@ -87,6 +87,7 @@ h4 {
   cursor: pointer;
   box-shadow: 0 0 31px #0ae3eb4d;
   border: 3px solid white;
+  opacity: 0.5;
 }
 h6 {
   width: 284px;
