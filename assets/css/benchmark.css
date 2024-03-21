@@ -38,7 +38,6 @@ main {
 }
 .contenitoreRisposte button:hover,
 .button-question:hover {
-  background: linear-gradient(to right, #59226d, #d20094);
   cursor: pointer;
 }
 .circle1 {
