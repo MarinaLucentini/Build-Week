@@ -38,7 +38,7 @@ main {
 }
 .contenitoreRisposte button:hover {
   cursor: pointer;
-  background: linear-gradient(to right, #59226d, #d20094);
+  background-color: #9625c0;
 }
 .circle1 {
   position: relative;
