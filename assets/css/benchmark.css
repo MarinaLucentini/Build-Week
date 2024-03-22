@@ -21,8 +21,8 @@ main {
   margin: 100px 240px 35px;
 }
 .contenitoreRisposte button {
-  background: linear-gradient(to right, #3a0a4b, #59226d);
-  /* background-color: #3a0a4b; */
+  /* background: linear-gradient(to right, #3a0a4b, #59226d); */
+  background-color: #3a0a4b;
   box-shadow: 0px -4px 5px 0px white;
   border: none;
   height: 100px;
