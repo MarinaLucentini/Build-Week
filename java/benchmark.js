@@ -101,7 +101,7 @@ function startTimer() {
         
       }
     }
-  }, 90)
+  }, 1000)
 }
 
 // Variabile per tenere traccia dell'indice della domanda corrente
