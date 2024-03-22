@@ -36,6 +36,7 @@ main {
 .contenitoreRisposte button:hover,
 .button-question:hover {
   cursor: pointer;
+  background-color: #9625c0;
 }
 .circle1 {
   position: relative;
