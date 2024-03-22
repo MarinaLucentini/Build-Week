@@ -99,7 +99,7 @@ function startTimer() {
         
       }
     }
-  }, 1000)
+  }, 5)
 }
 
 // Variabile per tenere traccia dell'indice della domanda corrente
@@ -135,10 +135,10 @@ function nextQuestion() {
       //modifica background colore bottone in base alla risposta
       if (isCorrect) {
         bottone.classList.add("green")
-        setTimeout(nextQuestion, 900)
+        setTimeout(nextQuestion, 300)
       } else {
         bottone.classList.add("red")
-        setTimeout(nextQuestion, 500)
+        setTimeout(nextQuestion, 200)
       }
 
       console.log(isCorrect ? "Risposta corretta!" : "Risposta sbagliata!")
