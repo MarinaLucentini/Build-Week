@@ -7,6 +7,7 @@ const domande90Mix = [
   question: "How long is an IPv6 address?",
   correct_answer: "128 bits",
   incorrect_answers: ["32 bits", "64 bits", "128 bytes"],
+  tempoPerRispondere: 30,
 },
 {
   type: "boolean",
@@ -15,6 +16,7 @@ const domande90Mix = [
   question: "The logo for Snapchat is a Bell.",
   correct_answer: "False",
   incorrect_answers: ["True"],
+  tempoPerRispondere: 31,
 },
 {
   type: "multiple",
@@ -24,6 +26,7 @@ const domande90Mix = [
     "The numbering system with a radix of 16 is more commonly referred to as ",
   correct_answer: "Hexidecimal",
   incorrect_answers: ["Binary", "Duodecimal", "Octal"],
+  tempoPerRispondere: 32,
 },
 {
   type: "multiple",
@@ -33,6 +36,7 @@ const domande90Mix = [
     "Which programming language shares its name with an island in Indonesia?",
   correct_answer: "Java",
   incorrect_answers: ["Python", "C", "Jakarta"],
+  tempoPerRispondere: 33,
 },
 {
   type: "boolean",
@@ -42,6 +46,7 @@ const domande90Mix = [
     "In most programming languages, the operator ++ is equivalent to the statement &quot;+= 1&quot;.",
   correct_answer: "True",
   incorrect_answers: ["False"],
+  tempoPerRispondere: 34,
 },
 {
   type: "multiple",
@@ -51,6 +56,7 @@ const domande90Mix = [
     "The programming language &#039;Swift&#039; was created to replace what other programming language?",
   correct_answer: "Objective-C",
   incorrect_answers: ["C#", "Ruby", "C++"],
+  tempoPerRispondere: 35,
 },
 {
   type: "boolean",
@@ -60,6 +66,7 @@ const domande90Mix = [
     "The NVidia GTX 1080 gets its name because it can only render at a 1920x1080 screen resolution.",
   correct_answer: "False",
   incorrect_answers: ["True"],
+  tempoPerRispondere: 36,
 },
 {
   type: "multiple",
@@ -72,6 +79,7 @@ const domande90Mix = [
     "Computer Personal Unit",
     "Central Processor Unit",
   ],
+  tempoPerRispondere: 37,
 },
 {
   type: "boolean",
@@ -80,6 +88,7 @@ const domande90Mix = [
   question: "Ada Lovelace is often considered the first computer programmer.",
   correct_answer: "True",
   incorrect_answers: ["False"],
+  tempoPerRispondere: 38,
 },
 {
   type: "multiple",
@@ -89,6 +98,7 @@ const domande90Mix = [
     "According to the International System of Units, how many bytes are in a kilobyte of RAM?",
   correct_answer: "1000",
   incorrect_answers: ["512", "1024", "500"],
+  tempoPerRispondere: 39,
 },
 {
   type: "multiple",
@@ -98,6 +108,7 @@ const domande90Mix = [
     "What is the most preferred image format used for logos in the Wikimedia database?",
   correct_answer: ".svg",
   incorrect_answers: [".png", ".jpeg", ".gif"],
+  tempoPerRispondere: 40,
 },
 {
   type: "multiple",
@@ -111,6 +122,7 @@ const domande90Mix = [
     "HD Graphics 600",
     "HD Graphics 7000",
   ],
+  tempoPerRispondere: 41,
 },
 {
   type: "multiple",
@@ -123,6 +135,7 @@ const domande90Mix = [
     "Corrective Style Sheet",
     "Computer Style Sheet",
   ],
+  tempoPerRispondere: 42,
 },
 {
   type: "multiple",
@@ -132,6 +145,7 @@ const domande90Mix = [
     "Which computer language would you associate Django framework with?",
   correct_answer: "Python",
   incorrect_answers: ["C#", "C++", "Java"],
+  tempoPerRispondere: 43,
 },
 {
   type: "multiple",
@@ -140,6 +154,7 @@ const domande90Mix = [
   question: "How many kilobytes in one gigabyte (in decimal)?",
   correct_answer: "1000000",
   incorrect_answers: ["1024", "1000", "1048576"],
+  tempoPerRispondere: 44,
 },
 {
   type: "multiple",
@@ -148,6 +163,7 @@ const domande90Mix = [
   question: "What amount of bits commonly equals one byte?",
   correct_answer: "8",
   incorrect_answers: ["1", "2", "64"],
+  tempoPerRispondere: 45,
 },
 {
   type: "boolean",
@@ -156,6 +172,7 @@ const domande90Mix = [
   question: "Time on Computers is measured via the EPOX System.",
   correct_answer: "False",
   incorrect_answers: ["True"],
+  tempoPerRispondere: 46,
 },
 {
   type: "boolean",
@@ -164,6 +181,7 @@ const domande90Mix = [
   question: "&quot;HTML&quot; stands for Hypertext Markup Language.",
   correct_answer: "True",
   incorrect_answers: ["False"],
+  tempoPerRispondere: 47,
 },
 {
   type: "boolean",
@@ -172,6 +190,7 @@ const domande90Mix = [
   question: "The Windows 7 operating system has six main editions.",
   correct_answer: "True",
   incorrect_answers: ["False"],
+  tempoPerRispondere: 43,
 },
 {
   type: "boolean",
@@ -180,6 +199,7 @@ const domande90Mix = [
   question: "The Windows ME operating system was released in the year 2000.",
   correct_answer: "True",
   incorrect_answers: ["False"],
+  tempoPerRispondere: 48,
 },
 {
   type: "multiple",
@@ -193,6 +213,7 @@ const domande90Mix = [
     "Saves a .png file of what&#039;s on the screen in your screenshots folder in photos",
     "Closes all windows",
   ],
+  tempoPerRispondere: 49,
 },
 {
   type: "multiple",
@@ -201,6 +222,7 @@ const domande90Mix = [
   question: "What language does Node.js use?",
   correct_answer: "JavaScript",
   incorrect_answers: ["Java", "Java Source", "Joomla Source Code"],
+  tempoPerRispondere: 58,
 },
 {
   type: "boolean",
@@ -210,6 +232,7 @@ const domande90Mix = [
     "The Python programming language gets its name from the British comedy group &quot;Monty Python.&quot;",
   correct_answer: "True",
   incorrect_answers: ["False"],
+  tempoPerRispondere: 59,
 },
 {
   type: "multiple",
@@ -219,6 +242,7 @@ const domande90Mix = [
     "If you were to code software in this language you&#039;d only be able to type 0&#039;s and 1&#039;s.",
   correct_answer: "Binary",
   incorrect_answers: ["JavaScript", "C++", "Python"],
+  tempoPerRispondere: 80,
 },
 {
   type: "multiple",
@@ -227,6 +251,7 @@ const domande90Mix = [
   question: "What is the domain name for the country Tuvalu?",
   correct_answer: ".tv",
   incorrect_answers: [".tu", ".tt", ".tl"],
+  tempoPerRispondere: 97,
 },
 {
   type: "multiple",
@@ -236,6 +261,7 @@ const domande90Mix = [
     "In &quot;Hexadecimal&quot;, what color would be displayed from the color code? &quot;#00FF00&quot;?",
   correct_answer: "Green",
   incorrect_answers: ["Red", "Blue", "Yellow"],
+  tempoPerRispondere: 92,
 },
 {
   type: "multiple",
@@ -245,6 +271,7 @@ const domande90Mix = [
     "What is the code name for the mobile operating system Android 7.0?",
   correct_answer: "Nougat",
   incorrect_answers: ["Ice Cream Sandwich", "Jelly Bean", "Marshmallow"],
+  tempoPerRispondere: 100,
 },
 {
   type: "multiple",
@@ -254,6 +281,7 @@ const domande90Mix = [
     "When Gmail first launched, how much storage did it provide for your email?",
   correct_answer: "1GB",
   incorrect_answers: ["512MB", "5GB", "Unlimited"],
+  tempoPerRispondere: 68,
 },
 {
   type: "multiple",
@@ -266,6 +294,7 @@ const domande90Mix = [
     "Light Access Node",
     "Land Address Navigation",
   ],
+  tempoPerRispondere: 62,
 },
 {
   type: "multiple",
@@ -274,6 +303,7 @@ const domande90Mix = [
   question: "What does the &quot;MP&quot; stand for in MP3?",
   correct_answer: "Moving Picture",
   incorrect_answers: ["Music Player", "Multi Pass", "Micro Point"],
+  tempoPerRispondere: 75,
 },
 //   fine easy e inizio medium -------------------------------------------------------------------------------------------------------------------
 {
@@ -284,6 +314,7 @@ const domande90Mix = [
     "All of the following programs are classified as raster graphics editors EXCEPT:",
   correct_answer: "Inkscape",
   incorrect_answers: ["Paint.NET", "GIMP", "Adobe Photoshop"],
+  tempoPerRispondere: 45,
 },
 {
   type: "multiple",
@@ -297,6 +328,7 @@ const domande90Mix = [
     "echo &quot;Hello World&quot;",
     "printf(&quot;Hello World&quot;)",
   ],
+  tempoPerRispondere: 55,
 },
 {
   type: "multiple",
@@ -305,6 +337,7 @@ const domande90Mix = [
   question: "How fast is USB 3.1 Gen 2 theoretically?",
   correct_answer: "10 Gb/s",
   incorrect_answers: ["5 Gb/s", "8 Gb/s", "1 Gb/s"],
+  tempoPerRispondere: 75,
 },
 {
   type: "multiple",
@@ -313,6 +346,7 @@ const domande90Mix = [
   question: "What is the number of keys on a standard Windows Keyboard?",
   correct_answer: "104",
   incorrect_answers: ["64", "94", "76"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -326,6 +360,7 @@ const domande90Mix = [
     "Germany",
     "China (People&#039;s Republic of)",
   ],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -334,6 +369,7 @@ const domande90Mix = [
   question: "Which operating system was released first?",
   correct_answer: "Mac OS",
   incorrect_answers: ["Windows", "Linux", "OS/2"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -346,6 +382,7 @@ const domande90Mix = [
     "Computational Data Network",
     "Compressed Data Network",
   ],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -355,6 +392,7 @@ const domande90Mix = [
     "Which one of these is not an official development name for a Ubuntu release?",
   correct_answer: "Mystic Mansion",
   incorrect_answers: ["Trusty Tahr", "Utopic Unicorn", "Wily Werewolf"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -367,6 +405,7 @@ const domande90Mix = [
     "Graphite Producing Unit",
     "Graphical Proprietary Unit",
   ],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -375,6 +414,7 @@ const domande90Mix = [
   question: "The name of technology company HP stands for what?",
   correct_answer: "Hewlett-Packard",
   incorrect_answers: ["Howard Packmann", "Husker-Pollosk", "Hellman-Pohl"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -387,6 +427,7 @@ const domande90Mix = [
     "Range of Applications with Identical Designs",
     "Randomized Abstract Identification Description",
   ],
+  tempoPerRispondere: 60,
 },
 {
   type: "boolean",
@@ -396,6 +437,7 @@ const domande90Mix = [
     "The very first recorded computer &quot;bug&quot; was a moth found inside a Harvard Mark II computer.",
   correct_answer: "True",
   incorrect_answers: ["False"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -405,6 +447,7 @@ const domande90Mix = [
     "Nvidia&#039;s headquarters are based in which Silicon Valley city?",
   correct_answer: "Santa Clara",
   incorrect_answers: ["Palo Alto", "Cupertino", "Mountain View"],
+  tempoPerRispondere: 60,
 },
 {
   type: "boolean",
@@ -414,6 +457,7 @@ const domande90Mix = [
     "To bypass US Munitions Export Laws, the creator of the PGP published all the source code in book form. ",
   correct_answer: "True",
   incorrect_answers: ["False"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -422,6 +466,7 @@ const domande90Mix = [
   question: "How many cores does the Intel i7-6950X have?",
   correct_answer: "10",
   incorrect_answers: ["12", "8", "4"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -431,6 +476,7 @@ const domande90Mix = [
     "In CSS, which of these values CANNOT be used with the &quot;position&quot; property?",
   correct_answer: "center",
   incorrect_answers: ["static", "absolute", "relative"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -440,6 +486,7 @@ const domande90Mix = [
     "Which of the following is a personal computer made by the Japanese company Fujitsu?",
   correct_answer: "FM-7",
   incorrect_answers: ["PC-9801", "Xmillennium ", "MSX"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -448,6 +495,7 @@ const domande90Mix = [
   question: "When was the programming language &quot;C#&quot; released?",
   correct_answer: "2000",
   incorrect_answers: ["1998", "1999", "2001"],
+  tempoPerRispondere: 60,
 },
 {
   type: "boolean",
@@ -457,6 +505,7 @@ const domande90Mix = [
     "Linus Sebastian is the creator of the Linux kernel, which went on to be used in Linux, Android, and Chrome OS.",
   correct_answer: "False",
   incorrect_answers: ["True"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -465,6 +514,7 @@ const domande90Mix = [
   question: "What is known as &quot;the brain&quot; of the Computer?",
   correct_answer: "Central Processing Unit",
   incorrect_answers: ["Motherboard", "Graphics Processing Unit", "Keyboard"],
+  tempoPerRispondere: 60,
 },
 {
   type: "boolean",
@@ -473,6 +523,7 @@ const domande90Mix = [
   question: "AMD created the first consumer 64-bit processor.",
   correct_answer: "True",
   incorrect_answers: ["False"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -485,6 +536,7 @@ const domande90Mix = [
     "Multipurpose Interleave Mail Exchange",
     "Mail Interleave Method Exchange",
   ],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -493,6 +545,7 @@ const domande90Mix = [
   question: ".rs is the top-level domain for what country?",
   correct_answer: "Serbia",
   incorrect_answers: ["Romania", "Russia", "Rwanda"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -506,6 +559,7 @@ const domande90Mix = [
     "Midnight on the creator of Unix&#039;s birthday",
     "Midnight, July 4, 1980",
   ],
+  tempoPerRispondere: 60,
 },
 {
   type: "boolean",
@@ -515,6 +569,7 @@ const domande90Mix = [
     "Early RAM was directly seated onto the motherboard and could not be easily removed.",
   correct_answer: "True",
   incorrect_answers: ["False"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -524,6 +579,7 @@ const domande90Mix = [
     "In programming, the ternary operator is mostly defined with what symbol(s)?",
   correct_answer: "?:",
   incorrect_answers: ["??", "if then", "?"],
+  tempoPerRispondere: 60,
 },
 {
   type: "boolean",
@@ -533,6 +589,7 @@ const domande90Mix = [
     "The last Windows operating system to be based on the Windows 9x kernel was Windows 98.",
   correct_answer: "False",
   incorrect_answers: ["True"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -542,6 +599,7 @@ const domande90Mix = [
     "What is the correct term for the metal object in between the CPU and the CPU fan within a computer system?",
   correct_answer: "Heat Sink",
   incorrect_answers: ["CPU Vent", "Temperature Decipator", "Heat Vent"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -551,6 +609,7 @@ const domande90Mix = [
     "What does the &#039;S&#039; in the RSA encryption algorithm stand for?",
   correct_answer: "Shamir",
   incorrect_answers: ["Secure", "Schottky", "Stable"],
+  tempoPerRispondere: 60,
 },
 {
   type: "boolean",
@@ -560,6 +619,7 @@ const domande90Mix = [
     "It&#039;s not possible to format a write-protected DVD-R Hard Disk.",
   correct_answer: "True",
   incorrect_answers: ["False"],
+  tempoPerRispondere: 60,
 },
 //   fine medium e inizio hard -------------------------------------------------------------------------------------------------------------------
 {
@@ -569,6 +629,7 @@ const domande90Mix = [
   question: "How many Hz does the video standard PAL support?",
   correct_answer: "50",
   incorrect_answers: ["59", "60", "25"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -578,6 +639,7 @@ const domande90Mix = [
     "Who is the original author of the realtime physics engine called PhysX?",
   correct_answer: "NovodeX",
   incorrect_answers: ["Ageia", "Nvidia", "AMD"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -587,6 +649,7 @@ const domande90Mix = [
     "America Online (AOL) started out as which of these online service providers?",
   correct_answer: "Quantum Link",
   incorrect_answers: ["CompuServe", "Prodigy", "GEnie"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -599,6 +662,7 @@ const domande90Mix = [
     "Cross-Site Scripting",
     "Insecure Direct Object References",
   ],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -611,6 +675,7 @@ const domande90Mix = [
     "Regular Interval Processes",
     "Routine Inspection Protocol",
   ],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -624,6 +689,7 @@ const domande90Mix = [
     "Customer collaboration",
     "Responding to change",
   ],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -633,6 +699,7 @@ const domande90Mix = [
     "Which of these Cherry MX mechanical keyboard switches is both tactile and clicky?",
   correct_answer: "Cherry MX Blue",
   incorrect_answers: ["Cherry MX Black", "Cherry MX Red", "Cherry MX Brown"],
+  tempoPerRispondere: 60,
 },
 {
   type: "boolean",
@@ -642,6 +709,7 @@ const domande90Mix = [
     "The IBM PC used an Intel 8008 microprocessor clocked at 4.77 MHz and 8 kilobytes of memory.",
   correct_answer: "False",
   incorrect_answers: ["True"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -651,6 +719,7 @@ const domande90Mix = [
     "The Harvard architecture for micro-controllers added which additional bus?",
   correct_answer: "Instruction",
   incorrect_answers: ["Address", "Data", "Control"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -660,6 +729,7 @@ const domande90Mix = [
     "What was the first company to use the term &quot;Golden Master&quot;?",
   correct_answer: "Apple",
   incorrect_answers: ["IBM", "Microsoft", "Google"],
+  tempoPerRispondere: 60,
 },
 {
   type: "boolean",
@@ -669,6 +739,7 @@ const domande90Mix = [
     "The T-Mobile Sidekick smartphone is a re-branded version of the Danger Hiptop.",
   correct_answer: "True",
   incorrect_answers: ["False"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -682,6 +753,7 @@ const domande90Mix = [
     "Programmable Sound Generator (PSG)",
     "PCM Sampler",
   ],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -690,6 +762,7 @@ const domande90Mix = [
   question: "Who is the founder of Palantir?",
   correct_answer: "Peter Thiel",
   incorrect_answers: ["Mark Zuckerberg", "Marc Benioff", "Jack Dorsey"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -698,6 +771,7 @@ const domande90Mix = [
   question: "What port does HTTP run on?",
   correct_answer: "80",
   incorrect_answers: ["53", "443", "23"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -707,6 +781,7 @@ const domande90Mix = [
     "What is the codename of the eighth generation Intel Core micro-architecture launched in October 2017?",
   correct_answer: "Coffee Lake",
   incorrect_answers: ["Sandy Bridge", "Skylake", "Broadwell"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -715,6 +790,7 @@ const domande90Mix = [
   question: "Which RAID array type is associated with data mirroring?",
   correct_answer: "RAID 1",
   incorrect_answers: ["RAID 0", "RAID 10", "RAID 5"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -724,6 +800,7 @@ const domande90Mix = [
     "Which of the following computer components can be built using only NAND gates?",
   correct_answer: "ALU",
   incorrect_answers: ["CPU", "RAM", "Register"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -737,6 +814,7 @@ const domande90Mix = [
     "Quantum Entanglement",
     "Quantum Programming",
   ],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -746,6 +824,7 @@ const domande90Mix = [
     "Dutch computer scientist Mark Overmars is known for creating which game development engine?",
   correct_answer: "Game Maker",
   incorrect_answers: ["Stencyl", "Construct", "Torque 2D"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -755,6 +834,7 @@ const domande90Mix = [
     "Which of these was the name of a bug found in April 2014 in the publicly available OpenSSL cryptography library?",
   correct_answer: "Heartbleed",
   incorrect_answers: ["Shellshock", "Corrupted Blood", "Shellscript"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -763,6 +843,7 @@ const domande90Mix = [
   question: "Who invented the &quot;Spanning Tree Protocol&quot;?",
   correct_answer: "Radia Perlman",
   incorrect_answers: ["Paul Vixie", "Vint Cerf", "Michael Roberts"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -772,6 +853,7 @@ const domande90Mix = [
     "Lenovo acquired IBM&#039;s personal computer division, including the ThinkPad line of laptops and tablets, in what year?",
   correct_answer: "2005",
   incorrect_answers: ["1999", "2002", "2008"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -785,6 +867,7 @@ const domande90Mix = [
     "A&#039;B&#039;",
     "AB&#039; + AB",
   ],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -794,6 +877,7 @@ const domande90Mix = [
     "What was the name of the security vulnerability found in Bash in 2014?",
   correct_answer: "Shellshock",
   incorrect_answers: ["Heartbleed", "Bashbug", "Stagefright"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -803,6 +887,7 @@ const domande90Mix = [
     "Which of the following is the oldest of these computers by release date?",
   correct_answer: "TRS-80",
   incorrect_answers: ["Commodore 64", "ZX Spectrum", "Apple 3"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -811,6 +896,7 @@ const domande90Mix = [
   question: "Which data structure does FILO apply to?",
   correct_answer: "Stack",
   incorrect_answers: ["Queue", "Heap", "Tree"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -820,6 +906,7 @@ const domande90Mix = [
     "Released in 2001, the first edition of Apple&#039;s Mac OS X operating system (version 10.0) was given what animal code name?",
   correct_answer: "Cheetah",
   incorrect_answers: ["Puma", "Tiger", "Leopard"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -833,6 +920,7 @@ const domande90Mix = [
     "Transport Layer",
     "Physical Layer",
   ],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -841,6 +929,7 @@ const domande90Mix = [
   question: "What major programming language does Unreal Engine 4 use?",
   correct_answer: "C++",
   incorrect_answers: ["Assembly", "C#", "ECMAScript"],
+  tempoPerRispondere: 60,
 },
 {
   type: "multiple",
@@ -849,6 +938,7 @@ const domande90Mix = [
   question: "What internet protocol was documented in RFC 1459?",
   correct_answer: "IRC",
   incorrect_answers: ["HTTP", "HTTPS", "FTP"],
+  tempoPerRispondere: 60,
 },
 //   fine hard -------------------------------------------------------------------------------------------------------------------
 ]

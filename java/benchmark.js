@@ -38,14 +38,22 @@ rimanenti.innerText = "REMAINING"
 
 // Funzione per avviare il timer
 function startTimer() {
-  clearInterval(timer)
-  counter = 50
-  progress = 0
+  clearInterval(timer); 
+  if(index < questions.length) {
+    const domandaCorrente = questions[index];
+    // Imposta il tempo per rispondere per la domanda corrente
+    counter = domandaCorrente.tempoPerRispondere;
+  } else {
+    console.error("Indice domanda fuori range!");
+    return; // Evita di avviare il timer se l'indice è fuori range
+  }
+  progress = 0; // Reimposta il progresso a 0 per la nuova domanda
   timer = setInterval(() => {
     counter--
     h4.innerText = counter
     const progressBar = document.getElementById("progress-bar")
-    progress = progress + 2
+    const domanda = questions[index]
+    progress = progress + (100 / domanda.tempoPerRispondere); // Aggiorna questa linea per calcolare il progresso in modo proporzionale
     progressBar.style.background = `conic-gradient(cyan ${progress}%, #9b9898 0%)`
 
     if (counter === 0) {
@@ -64,13 +72,14 @@ function startTimer() {
         startTimer()
 
       } else {
-        console.log("Tempo scaduto ultima domanda!")
+        console.log("Tempo scaduto ultima domanda!aaaaaaaaaaaaa")
+        const domanda = questions[index -1]
+        const provola = questions[4]
         results.push({
-          question: "tempo scaduto",
+          question: provola.question,
           selectedAnswer: "Time Out",
-          correctAnswer: "non hai risposto",
+          correctAnswer: domanda.correct_answer,
           isCorrect: false,
-          
         })
         // Se siamo all'ultima domanda, aggiungi il pulsante per mostrare i risultati
         const footer = document.querySelector("footer")
@@ -103,7 +112,7 @@ function nextQuestion() {
   const risposteElement = document.querySelector(".contenitoreRisposte")
   risposteElement.innerHTML = ""
   // Controlla se siamo all'ultima domanda
-  if (index === questions.length -1) {
+  if (index === questions.length) {
     // Se siamo all'ultima domanda, ferma il timer
     startTimer()
     

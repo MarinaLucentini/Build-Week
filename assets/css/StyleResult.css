@@ -45,10 +45,10 @@ header div img {
 .contenutoTuttoIlResult {
   margin-top: 70px;
   display: inline-flex;
-  margin-right: 100px;
+  margin-right: 20px;
 }
 .contenutoTuttoIlResult .risultatiCorretti {
-  margin-right: 180px;
+  margin-right: 100px;
 }
 .contenutoTuttoIlResult .risultatiSbagliati {
   margin-left: 100px;
