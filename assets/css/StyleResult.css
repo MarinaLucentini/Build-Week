@@ -143,3 +143,10 @@ h6 .totSuTot {
 .bottoneRateUs:hover {
   opacity: 1;
 }
+#list li {
+  border: 1px solid white;
+  padding: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0px 0px 20px 3px #808080;
+  border-radius: 30px;
+}
