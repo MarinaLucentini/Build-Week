@@ -148,29 +148,91 @@ function calculateStats(groups) {
     stats[difficulty] = {
       totalQuestions,
       correctAnswers,
-      incorrectAnswers, // Aggiungi le risposte errate al risultato
-      correctPercentage: `${correctPercentage}%` // Aggiungi la percentuale al risultato
+      incorrectAnswers, 
+      correctPercentage: `${correctPercentage}%` 
     };
   }
   return stats;
 }
 
+//------------------------------------
+function haveSameDifficulty(data) {
+  if (data.length === 0) return false;
+  const firstDifficulty = data[0].difficulty;
+  return data.every(item => item.difficulty === firstDifficulty);
+}
+
+// vari log con calcoli aggiornati
 const groupedResults = groupByDifficulty(results);
 console.log("Raggruppato per difficoltà:", groupedResults);
 
 const stats = calculateStats(groupedResults);
 console.log("Statistiche:", stats);
 
-const htmlContent = `
-<p id="totGiuste"><span class="correctttttttttt">Correct Easy</span><br/><br/> <span class="jdhbcjh">${stats.easy?.correctAnswers || 0} / <span class="totColoratoooooooo">${stats.easy?.totalQuestions || 0}</span> questions</span><br/><br/><span class="bcjh">${stats.easy?.correctPercentage || '0%'}</span></p>
 
-<p id="totMedie"><span class="correctttttttttt">Correct Medium</span><br/><br/> <span class="jdhbcjh">${stats.medium?.correctAnswers || 0} / <span class="totColoratoooooooo">${stats.medium?.totalQuestions || 0}</span> questions</span><br/><br/><span class="bcjh">${stats.medium?.correctPercentage || '0%'}</span></p>
 
-<p id="totSbagliate"><span class="correctttttttttt">Correct Hard</span><br/><br/> <span class="jdhbcjh">${stats.hard?.correctAnswers || 0} / <span class="totColoratoooooooo">${stats.hard?.totalQuestions || 0}</span> questions</span><br/><br/><span class="bcjh">${stats.hard?.correctPercentage || '0%'}</span></p>
-`;
+const sameDifficulty = haveSameDifficulty(results);
+// Funzione modificata per aggiornare in base alla difficoltà
+function updateHTMLBasedOnDifficulty(sameDifficulty, stats, difficulty) {
+  let htmlContent = ''; 
 
-// Aggiorna il contenuto dell'elemento con id 'abba'
-document.getElementById("abba").innerHTML = htmlContent;
+  if (sameDifficulty) {
+    // Se tutti gli oggetti hanno la stessa difficoltà allora inserisce:
+    const stat = stats[difficulty];
+    htmlContent = `<p id="tot${difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}"><span class="correctttttttttt">Correct ${difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}</span><br/><br/> <span class="jdhbcjh">${stat.correctAnswers || 0} / <span class="totColoratoooooooo">${stat.totalQuestions || 0}</span> questions</span><br/><br/><span class="bcjh">${stat.correctPercentage || '0%'}</span></p>`;
+    document.getElementById("fix").innerHTML = htmlContent; // Aggiorna qui per coerenza e per evitare riferimenti non definiti
+  } else {
+    // Se ci sono oggetti con difficoltà diverse allora inserisce:
+    htmlContent = `
+    <p id="totGiuste"><span class="correctttttttttt">Correct Easy</span><br/><br/> <span class="jdhbcjh">${stats.easy?.correctAnswers || 0} / <span class="totColoratoooooooo">${stats.easy?.totalQuestions || 0}</span> questions</span><br/><br/><span class="bcjh">${stats.easy?.correctPercentage || '0%'}</span></p>
+
+    <p id="totMedie"><span class="correctttttttttt">Correct Medium</span><br/><br/> <span class="jdhbcjh">${stats.medium?.correctAnswers || 0} / <span class="totColoratoooooooo">${stats.medium?.totalQuestions || 0}</span> questions</span><br/><br/><span class="bcjh">${stats.medium?.correctPercentage || '0%'}</span></p>
+
+    <p id="totSbagliate"><span class="correctttttttttt">Correct Hard</span><br/><br/> <span class="jdhbcjh">${stats.hard?.correctAnswers || 0} / <span class="totColoratoooooooo">${stats.hard?.totalQuestions || 0}</span> questions</span><br/><br/><span class="bcjh">${stats.hard?.correctPercentage || '0%'}</span></p>
+    `;
+    document.getElementById("abba").innerHTML = htmlContent; 
+  }
+}
+
+if (sameDifficulty && results.length > 0) {
+  updateHTMLBasedOnDifficulty(true, stats, results[0].difficulty);
+} else {
+  updateHTMLBasedOnDifficulty(false, stats);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const htmlContent = `
+// <p id="totGiuste"><span class="correctttttttttt">Correct Easy</span><br/><br/> <span class="jdhbcjh">${stats.easy?.correctAnswers || 0} / <span class="totColoratoooooooo">${stats.easy?.totalQuestions || 0}</span> questions</span><br/><br/><span class="bcjh">${stats.easy?.correctPercentage || '0%'}</span></p>
+
+// <p id="totMedie"><span class="correctttttttttt">Correct Medium</span><br/><br/> <span class="jdhbcjh">${stats.medium?.correctAnswers || 0} / <span class="totColoratoooooooo">${stats.medium?.totalQuestions || 0}</span> questions</span><br/><br/><span class="bcjh">${stats.medium?.correctPercentage || '0%'}</span></p>
+
+// <p id="totSbagliate"><span class="correctttttttttt">Correct Hard</span><br/><br/> <span class="jdhbcjh">${stats.hard?.correctAnswers || 0} / <span class="totColoratoooooooo">${stats.hard?.totalQuestions || 0}</span> questions</span><br/><br/><span class="bcjh">${stats.hard?.correctPercentage || '0%'}</span></p>
+// `;
+// document.getElementById("abba").innerHTML = htmlContent;
 
 
 

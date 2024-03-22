@@ -44,7 +44,7 @@ function startTimer() {
     // Imposta il tempo per rispondere per la domanda corrente
     counter = domandaCorrente.tempoPerRispondere;
   } else {
-    console.error("Indice domanda fuori range!");
+    console.log("Evita di avviare il timer se l'indice è fuori range");
     return; // Evita di avviare il timer se l'indice è fuori range
   }
   progress = 0; // Reimposta il progresso a 0 per la nuova domanda
@@ -101,7 +101,7 @@ function startTimer() {
         
       }
     }
-  }, 1000)
+  }, 90)
 }
 
 // Variabile per tenere traccia dell'indice della domanda corrente
@@ -123,6 +123,7 @@ function nextQuestion() {
     startTimer()
   }
   const domanda = questions[index]
+  console.log("se da errore alla 127 è tutto ok!")
   questionElement.innerHTML = `<h1>${domanda.question}</h1>`
   contatoreElement.innerHTML = `<span>${index + 1}<span class="coloreContatore"> / ${questions.length}</span></span>`
   const tutteLeRisposte = [...domanda.incorrect_answers, domanda.correct_answer]
