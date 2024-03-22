@@ -80,7 +80,7 @@ const grafic = () => {
     passedOrNot.innerText = "I am sorry";
     passedOrNot2.innerText = "You failed the test.";
   }
-  graficResult.style.background = `conic-gradient(red ${percentualeSbagliate}%, green 0%)`;
+  graficResult.style.background = `conic-gradient(#d20094 ${percentualeSbagliate}%, #00ffff 0%)`;
 };
 grafic();
 const list = () => {
@@ -89,7 +89,7 @@ const list = () => {
     const question = document.createElement("li");
     listAnswer.appendChild(question);
 
-    question.innerText = "Question" + " " + results[i].question;
+    question.innerText = results[i].question;
 
     if (results[i].correctAnswer === results[i].selectedAnswer) {
       const selectedAnswer = document.createElement("p");
@@ -101,7 +101,7 @@ const list = () => {
       selectedAnswer.appendChild(checked);
       checked.src =
         "https://th.bing.com/th/id/R.b8c2a80b495234d91c635a32ef0f0099?rik=5TxvifYPiX%2fyYg&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2fRcd%2fRpo%2fRcdRpoLoi.png&ehk=f3CulHw8q4hRI18oWolrpyk21R9S%2fTMxC8AEqvOU35U%3d&risl=&pid=ImgRaw&r=0";
-      checked.style = "width:10px";
+      checked.style = "width:20px";
     } else {
       const selectedAnswer = document.createElement("p");
       question.appendChild(selectedAnswer);
@@ -116,7 +116,7 @@ const list = () => {
       selectedAnswer.appendChild(wrong);
       wrong.src =
         "https://th.bing.com/th/id/R.e88bb40ecefdbd2d2f9a02944e23e687?rik=egJSj%2bSgNwIo%2bw&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2f9cR%2fLbg%2f9cRLbgE7i.png&ehk=um2l3QR5q%2bY4Ii8W05U1Ly%2f%2bmY5QrVU8ZFS1fmzOXlc%3d&risl=&pid=ImgRaw&r=0";
-      wrong.style = "width:10px";
+      wrong.style = "width:20px";
     }
     // const correctAnswer = document.createElement("p");
     // question.appendChild(correctAnswer);

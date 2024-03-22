@@ -29,7 +29,7 @@ header div img {
   border-radius: 50%;
   width: 22rem;
   height: 22rem;
-  mask-image: radial-gradient(circle at center, transparent 137px, white 71px);
+  mask-image: radial-gradient(circle at center, transparent 120px, white 61px);
   position: relative;
   top: -229px;
   left: -5px;
@@ -45,7 +45,6 @@ header div img {
 .contenutoTuttoIlResult {
   margin-top: 70px;
   display: inline-flex;
-  margin-right: 30px;
 }
 .contenutoTuttoIlResult .risultatiCorretti {
   margin-right: 100px;
@@ -112,7 +111,7 @@ h6 .correct {
   line-height: 50px;
 }
 h6 .percentuale {
-  font-size: 50px;
+  font-size: 65px;
   line-height: 80px;
   font-family: "Outfit", sans-serif;
   font-weight: bold;
