@@ -134,6 +134,7 @@ h6 .totSuTot {
   line-height: 2em;
   text-align: left;
   font-size: 28px;
+  margin: 0px 100px;
 }
 #list {
   list-style-type: decimal;
