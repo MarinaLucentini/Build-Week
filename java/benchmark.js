@@ -135,8 +135,10 @@ function nextQuestion() {
       //modifica background colore bottone in base alla risposta
       if (isCorrect) {
         bottone.classList.add("green")
+        setTimeout(nextQuestion, 900)
       } else {
         bottone.classList.add("red")
+        setTimeout(nextQuestion, 500)
       }
 
       console.log(isCorrect ? "Risposta corretta!" : "Risposta sbagliata!")
@@ -167,7 +169,7 @@ function nextQuestion() {
         sessionStorage.setItem("results", JSON.stringify(results))
       } else {
         // Se non siamo all'ultima domanda, mostra la prossima domanda
-        setTimeout(nextQuestion, 80)
+        
       }
     })
   })
