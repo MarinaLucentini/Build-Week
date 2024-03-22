@@ -118,26 +118,68 @@ const list = () => {
         "https://th.bing.com/th/id/R.e88bb40ecefdbd2d2f9a02944e23e687?rik=egJSj%2bSgNwIo%2bw&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2f9cR%2fLbg%2f9cRLbgE7i.png&ehk=um2l3QR5q%2bY4Ii8W05U1Ly%2f%2bmY5QrVU8ZFS1fmzOXlc%3d&risl=&pid=ImgRaw&r=0";
       wrong.style = "width:20px";
     }
-    // const correctAnswer = document.createElement("p");
-    // question.appendChild(correctAnswer);
-    // correctAnswer.innerText = "Correct answer" + " " + results[i].correctAnswer;
-    //   " " +
-    //   "Selected answer" +
-    //   " " +
-    //   results[i].selectedAnswer +
-    //   " " +
-    //   "Correct answer" +
-    //   " " +
-    //   results[i].correctAnswer;
-    // if (results[i].selectedAnswer === results[i].correctAnswer) {
-    //   const giusto = document.createElement("p");
-    //   answer.appendChild(giusto);
-    //   giusto.innerText = "Bravo!";
-    // } else {
-    //   const sbagliato = document.createElement("p");
-    //   answer.appendChild(sbagliato);
-    //   sbagliato.innerText = "Sbagliato!";
-    // }
+    
   }
 };
+console.log("resultes no filter",results)
 list();
+
+// Raggruppa i dati in base alla difficoltà
+function groupByDifficulty(data) {
+  return data.reduce((acc, curr) => {
+    // Se la chiave per la difficoltà corrente non esiste, la crea e inizializza con un array vuoto
+    if (!acc[curr.difficulty]) {
+      acc[curr.difficulty] = [];
+    }
+    // Aggiunge l'elemento corrente all'array della difficoltà corrispondente
+    acc[curr.difficulty].push(curr);
+    return acc;
+  }, {}); 
+}
+
+function calculateStats(groups) {
+  const stats = {};
+  for (const [difficulty, questions] of Object.entries(groups)) {
+    const totalQuestions = questions.length;
+    const correctAnswers = questions.filter(q => String(q.isCorrect).trim() === "true").length;
+    const incorrectAnswers = totalQuestions - correctAnswers; // Calcola le risposte errate
+    const correctPercentage = (correctAnswers / totalQuestions * 100).toFixed(2); // Calcola la percentuale
+
+    stats[difficulty] = {
+      totalQuestions,
+      correctAnswers,
+      incorrectAnswers, // Aggiungi le risposte errate al risultato
+      correctPercentage: `${correctPercentage}%` // Aggiungi la percentuale al risultato
+    };
+  }
+  return stats;
+}
+
+const groupedResults = groupByDifficulty(results);
+console.log("Raggruppato per difficoltà:", groupedResults);
+
+const stats = calculateStats(groupedResults);
+console.log("Statistiche:", stats);
+
+const htmlContent = `
+<p id="totGiuste"><span class="correctttttttttt">Correct Easy</span><br/><br/> <span class="jdhbcjh">${stats.easy?.correctAnswers || 0} / <span class="totColoratoooooooo">${stats.easy?.totalQuestions || 0}</span> questions</span><br/><br/><span class="bcjh">${stats.easy?.correctPercentage || '0%'}</span></p>
+
+<p id="totMedie"><span class="correctttttttttt">Correct Medium</span><br/><br/> <span class="jdhbcjh">${stats.medium?.correctAnswers || 0} / <span class="totColoratoooooooo">${stats.medium?.totalQuestions || 0}</span> questions</span><br/><br/><span class="bcjh">${stats.medium?.correctPercentage || '0%'}</span></p>
+
+<p id="totSbagliate"><span class="correctttttttttt">Correct Hard</span><br/><br/> <span class="jdhbcjh">${stats.hard?.correctAnswers || 0} / <span class="totColoratoooooooo">${stats.hard?.totalQuestions || 0}</span> questions</span><br/><br/><span class="bcjh">${stats.hard?.correctPercentage || '0%'}</span></p>
+`;
+
+// Aggiorna il contenuto dell'elemento con id 'abba'
+document.getElementById("abba").innerHTML = htmlContent;
+
+
+
+
+
+
+
+  
+
+
+
+  

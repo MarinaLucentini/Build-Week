@@ -153,3 +153,47 @@ h6 .totSuTot {
   box-shadow: 0px 0px 20px 3px #808080;
   border-radius: 30px;
 }
+/*       ---------------------------------------------------------    */
+#abba {
+  display: inline-flex;
+  margin-top: 50px;
+  font-family: "Outfit", sans-serif;
+}
+#totGiuste {
+  margin-right: 250px;
+  box-shadow: 0px 0px 20px 3px #808080;
+  border-radius: 30px;
+  width: 370px;
+  height: 140px;
+  padding: 15px;
+}
+#totMedie {
+  box-shadow: 0px 0px 20px 3px #808080;
+  border-radius: 30px;
+  width: 370px;
+  height: 140px;
+  padding: 15px;
+}
+#totSbagliate {
+  margin-left: 250px;
+  box-shadow: 0px 0px 20px 3px #808080;
+  border-radius: 30px;
+  width: 370px;
+  height: 140px;
+  padding: 15px;
+}
+
+.correctttttttttt {
+  font-size: 45px;
+  font-weight: bold;
+}
+.totColoratoooooooo {
+  color: #d20094;
+}
+.jdhbcjh {
+  font-size: 32px;
+}
+.bcjh {
+  font-size: 27px;
+  font-weight: bold;
+}

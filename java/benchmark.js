@@ -66,6 +66,7 @@ function startTimer() {
           selectedAnswer: "Time Out",
           correctAnswer: domanda.correct_answer,
           isCorrect: false,
+          difficulty: domanda.difficulty,
         })
         console.log("Tempo scaduto!")
         nextQuestion()
@@ -80,6 +81,7 @@ function startTimer() {
           selectedAnswer: "Time Out",
           correctAnswer: domanda.correct_answer,
           isCorrect: false,
+          difficulty: domanda.difficulty,
         })
         // Se siamo all'ultima domanda, aggiungi il pulsante per mostrare i risultati
         const footer = document.querySelector("footer")
@@ -148,6 +150,7 @@ function nextQuestion() {
         selectedAnswer: risposta,
         correctAnswer: domanda.correct_answer,
         isCorrect: isCorrect,
+        difficulty: domanda.difficulty,
       })
       index++
       // Controlla se siamo all'ultima domanda
