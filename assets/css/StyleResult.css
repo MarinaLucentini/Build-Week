@@ -137,7 +137,7 @@ h6 .totSuTot {
   font-size: 28px;
 }
 #list {
-  list-style-type: disc;
+  list-style-type: decimal;
   padding: 2em;
   list-style-position: inside;
 }
